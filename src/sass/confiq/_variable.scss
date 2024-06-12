@@ -1,0 +1,30 @@
+/*=============== VARIABLES CSS ===============*/
+
+
+:root {
+
+    //colors
+    --white-color: #FFFFFF;
+    --dark-color: #353030;
+    --bg-color: #FBFBFB;
+    --main-blue: #163BA4;
+    --footer-bg: #0E225B;
+
+    //font
+    --body-font: 'Raleway', sans-serif;
+    --title-font: 'Montserrat', sans-serif;
+
+    //font-size
+    --h1-font: 3em;
+    --h2-font: 1.75em;
+    --h3-font: 1.25em;
+    --regular-font: 1em;
+    --font-128:8em;
+
+
+    @include mq(tablet-wide, max) {
+        --h1-font: 2em;
+        --h2-font: 1.3em;
+        --h3-font: 1.1em;
+    }
+}

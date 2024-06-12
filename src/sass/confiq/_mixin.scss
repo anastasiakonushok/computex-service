@@ -1,0 +1,152 @@
+//media
+$breakpoints: ("phone": 400px,
+    "phone-wide": 480px,
+    "phablet": 560px,
+    "tablet-small": 640px,
+    "tablet": 768px,
+    "tablet-wide": 1024px,
+    "desktop": 1248px,
+    "desktop-wide": 1440px);
+
+@mixin mq($width, $type: min) {
+    @if map_has_key($breakpoints, $width) {
+        $width: map_get($breakpoints, $width);
+
+        @if $type==max {
+            $width: $width - 1px;
+        }
+
+        @media only screen and (#{$type}-width: $width) {
+            @content;
+        }
+    }
+}
+
+//position
+@mixin position($position: absolute, $top: null, $right: null, $bottom: null, $left: null, $z-index: initial) {
+    position: $position;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+    z-index: $z-index;
+}
+
+// placeholder
+@mixin placeholder {
+    &.placeholder {
+        @content;
+    }
+
+    &:-moz-placeholder {
+        @content;
+    }
+
+    &::-moz-placeholder {
+        @content;
+    }
+
+    &:-ms-input-placeholder {
+        @content;
+    }
+
+    &::-webkit-input-placeholder {
+        @content;
+    }
+}
+
+//background
+@mixin background-gradient($start-color, $end-color, $orientation) {
+    background: $start-color;
+
+    @if $orientation=='vertical' {
+        background: -webkit-linear-gradient(top, $start-color, $end-color);
+        background: linear-gradient(to bottom, $start-color, $end-color);
+    }
+
+    @else if $orientation=='horizontal' {
+        background: -webkit-linear-gradient(left, $start-color, $end-color);
+        background: linear-gradient(to right, $start-color, $end-color);
+    }
+
+    @else {
+        background: -webkit-radial-gradient(center, ellipse cover, $start-color, $end-color);
+        background: radial-gradient(ellipse at center, $start-color, $end-color);
+    }
+}
+
+//width
+
+@mixin width($value) {
+    width: ($value / 16) + rem;
+}
+
+@mixin toRem($property, $value) {
+    #{$property}: (($value / 16)) + rem;
+}
+
+//fonts
+@mixin regular {
+    font-size: var(--regular-font);
+    line-height: 140%;
+    font-weight: 400;
+}
+
+@mixin h1 {
+    font-size: var(--h1-font);
+    line-height: 110%;
+    font-weight: 700;
+}
+@mixin h2 {
+    font-size: var(--h2-font);
+    line-height: 110%;
+    font-weight: 700;
+}
+@mixin h3 {
+    font-size: var(--h3-font);
+    line-height: 110%;
+    font-weight: 700;
+}
+
+@mixin font-128 {
+    font-family: var(--title-font);
+    font-size: var(--font-128);
+    line-height: 110%;
+    font-weight: 900;
+    color:var(--main-blue);
+}
+
+//
+
+@mixin button-arrow($bg, $color,$border-color) {
+    font-weight: 400;
+    font-size: var(--regular-font);
+    padding: 14px 32px;
+    background: $bg;
+    color: $color;
+    display: inline-flex;
+    line-height: 120%;
+    gap: 10px;
+    font-weight: 500;
+    border-radius: 10px;
+    border: 1px solid $border-color;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+        background: darken($bg, 8%);
+        transition: all 0.3s ease;
+    }
+
+    &:active {
+        background: darken($bg, 25%);
+    }
+
+}
+
+@mixin hover {
+    &:hover {
+        transition: all 0.3s ease;
+        @content;
+    }
+}
