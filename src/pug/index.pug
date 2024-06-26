@@ -1,35 +1,51 @@
 extends layout/app
 
 block page 
-   include chunk/header
-   main.main
-      section.hero
-         .hero__bg 
-            img(src="/img/bg-ring.svg", alt="")
-         .container.hero__container 
-            .hero__content 
-               span.span-computex [computex]
-               h1 сервисный центр по ремонту техники
-               p Мы быстро и профессионально отремонтируем любое электронное устройство с гарантией. Отремонтируем, настроим, установим бытовую технику у Вас дома, на даче или на работе.
-               a(href="./all-services.html") 
-                  .pulsating-circle >
-                  span Все услуги
-            .hero__img 
-               img(src="img/hero-services.png" alt="") 
-      section.service-links
-         .container.service-links__container 
-            a(href="").service-links__link
-               h3 ремонт ноутбуков
-               img(src="/img/repair-book.png", alt="")
-            a(href="/img/refilling-cartridges.png").service-links__link
-               h3 заправка катриджей 
-               img(src="/img/refilling-cartridges.png", alt="")
-            a(href="/img/printers.png").service-links__link
-               h3 ремонт принтеров
-               img(src="/img/printers.png", alt="")
-            a(href="").service-links__link
-               h3 чистка ноутбуков
-            a(href="").service-links__link
-               h3 ремонт компьютера
-            a(href="").service-links__link
-               h3 Замена матрицы и по
+    include chunk/header
+    main.main
+        section.hero
+            .hero__bg 
+                img(src="/img/bg-ring.svg" alt="")
+            .container.hero__container 
+                .hero__content 
+                    span.span-computex [ computex ]
+                    h1 сервисный центр по ремонту техники
+                    p Мы быстро и профессионально отремонтируем любое электронное устройство с гарантией. Отремонтируем, настроим, установим бытовую технику у Вас дома, на даче или на работе.
+                    a(href="./all-services.html") 
+                        .pulsating-circle >
+                        span Все услуги
+                .hero__img 
+                    img(src="img/hero-services.png" alt="") 
+        section.service-links
+            .container.service-links__container 
+                a(href="").service-links__link
+                    h3 ремонт ноутбуков
+                    img(src="/img/repair-book.png" alt="")
+                a(href="/img/refilling-cartridges.png").service-links__link
+                    h3 заправка катриджей 
+                    img(src="/img/refilling-cartridges.png" alt="")
+                a(href="/img/printers.png").service-links__link
+                    h3 ремонт принтеров
+                    img(src="/img/printers.png" alt="")
+                a(href="").service-links__link
+                    h3 чистка ноутбуков
+                    img(src="/img/laptop.png" alt="")
+                a(href="").service-links__link
+                    h3 ремонт компьютера
+                    img(src="/img/computer.png" alt="")
+                a(href="").service-links__link
+                    h3 Замена матрицы и по
+                    img(src="/img/po-repair.png" alt="")
+        .section-advantages(style='background-image: url("./img/checking-laptop.png"); ')
+            .container.flex.section-advantages__container 
+                .section-advantages__block.flex 
+                    img(src="/img/place-icon.svg", alt="") 
+                    span В центре города
+                .section-advantages__block.flex 
+                    img(src="/img/garant-icon.svg", alt="") 
+                    span Гарантия на все виды услуг
+                .section-advantages__block.flex
+                    img(src="/img/exp-icon.svg", alt="") 
+                    span Опыт работы с 2003 года
+    include chunk/footer
+

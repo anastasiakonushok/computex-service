@@ -72,11 +72,11 @@
         color:var(--main-white);
     }
 }
-@include mq(tablet-wide, min) {
-    .hero {
-        background-attachment:fixed;
-    }
-}
+// @include mq(tablet-wide, min) {
+//     .hero {
+        
+//     }
+// }
 @include mq(tablet-wide, max) {
     .hero {
         background-position: 80% 50%;

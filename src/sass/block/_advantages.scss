@@ -1,0 +1,19 @@
+.section-advantages{
+    padding: 60px 0px;
+    background-repeat: no-repeat;
+    background-position: center 70%;
+    background-size: cover;
+    &__container {
+        justify-content: space-between;
+    }
+    &__block {
+        align-items:center;
+        gap: 30px;
+        span {
+            @include regular;
+            font-weight: 700;
+            color:var(--white-color);
+            width: 40%;
+        }
+    }
+}

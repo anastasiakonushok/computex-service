@@ -1,0 +1,138 @@
+.footer {
+    padding-top: 60px;
+    padding-bottom: 30px;
+    color: var(--dark-color);
+    background: var(--main-gray);
+
+    h3 {
+        font-weight: 500;
+        margin-bottom: 30px;
+        color:var(--main-yellow);
+    }
+    &__contact {
+        ul {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        svg {
+            width: 20px;
+        }
+    }
+    &__phone {
+        align-items: center;
+        gap: 15px;
+        color: var(--dark-color);
+
+        .text {
+            font-family: var(--title-font);
+            font-size: 18px;
+            line-height: 110%;
+        }
+    }
+
+    &__time,&__local {
+        gap: 15px;
+        align-items:center;
+        color:var(--dark-color);
+    }
+
+    &__wrapp {
+        justify-content: space-between;
+        margin-bottom: 30px;
+    }
+
+    .nav-footer {
+        ul {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        a {
+            @include regular;
+            color: var(--dark-color);
+        }
+    }
+
+    &__copyright {
+        padding-top: 60px;
+        text-align: center;
+
+        p {
+            font-size: 14px;
+        }
+    }
+}
+.button-up {
+    display: block;
+    float: right;
+    color:var(--main-yellow);   
+    cursor: pointer;
+    padding: 16px 20px;
+    background: #fff;
+    box-shadow: 0 6px 10px 0 rgba(68, 68, 68, 0.212);
+}
+
+@include mq(tablet-wide, max) {
+    .footer {
+        &__wrapp {
+            flex-wrap: wrap;
+            // flex-direction: column;
+            gap: 60px;
+        }
+
+        .contact,
+        .nav-footer,
+        .contact-2 {
+            width: 45%;
+        }
+    }
+}
+
+@include mq(tablet, max) {
+    .footer {
+        &__wrapp {
+            flex-wrap: wrap;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .contact,
+        .nav-footer,
+        .contact-2 {
+            width: 100%;
+        }
+    }
+}
+
+@include mq(tablet, min) {
+    .button-up.scroll-top_down {
+        position: fixed;
+        right: 16px;
+        bottom: 16px;
+        z-index: 1000;
+        transition: all 0.5s ease-in-out;
+    }
+    .button-up.scroll-top_up {
+        position: fixed;
+        right: 16px;
+        bottom: 16px;
+        z-index: 1000;
+        transition: all 0.5s ease-in-out;
+    }
+    .button-up {
+        @include hover {
+            transform: scale(1.1);
+            transition: all 0.3s ease;
+        }
+    }
+    .footer {
+        a {
+            @include hover {
+                color: var(--main-yellow);
+            }
+        }
+    }
+}

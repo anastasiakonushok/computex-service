@@ -5,6 +5,7 @@
     position: relative;
     transition: all 0.3s ease-in-out;
     z-index: 1000;
+    box-shadow: 2px -1px 13px 6px rgba(190, 188, 188, 0.22);
     .header-top {
         padding: 10px 0px;
     
@@ -235,11 +236,11 @@
         top: -200px;
         transition: all 0.3s ease;
     }
-    .header_up {
-        transition: all 0.3s ease;
-        position: fixed;
-        box-shadow: 0 8px 20px 0 rgba(2, 24, 44, 0.194);
-    }
+    // .header_up {
+    //     transition: all 0.3s ease;
+    //     position: fixed;
+    //     box-shadow: 0 8px 20px 0 rgba(2, 24, 44, 0.194);
+    // }
     .nav__item:hover > .sub-menu {
         display: block;
     }
