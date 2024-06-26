@@ -95,7 +95,7 @@ $breakpoints: ("phone": 400px,
 @mixin h1 {
     font-size: var(--h1-font);
     line-height: 110%;
-    font-weight: 700;
+    font-weight: 800;
 }
 @mixin h2 {
     font-size: var(--h2-font);
@@ -116,31 +116,79 @@ $breakpoints: ("phone": 400px,
     color:var(--main-blue);
 }
 
+// Определение миксина для кнопки
+// Определение миксина для кнопки с использованием CSS-переменных
+@mixin button-orange($padding, $border-radius: 5px, $font-size: 16px) {
+    background-color: var(--main-orange);
+    color: var(--main-white);
+    padding: $padding;
+    border: none;
+    border-radius: $border-radius;
+    font-size: $font-size;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  
+    &:hover {
+      background-color: #DAAB3A;
+    }
+  
+    // &:focus {
+    //   outline: none;
+    //   box-shadow: 0 0 0 3px var(--focus-shadow-color);
+    // }
+  
+    // &:active {
+    //   background-color: var(--active-bg-color);
+    //   box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+    // }
+}
+@mixin button-gray($padding, $border-radius: 5px, $font-size: 16px) {
+    text-align: center;
+    background-color: var(--main-gray);
+    color: var(--main-white);
+    padding: $padding;
+    font-weight: 500;
+    border: none;
+    border-radius: $border-radius;
+    font-size: $font-size;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  
+    &:hover {
+      background-color: var(--main-orange);
+    }
+  
+    // &:focus {
+    //   outline: none;
+    //   box-shadow: 0 0 0 3px var(--focus-shadow-color);
+    // }
+  
+    // &:active {
+    //   background-color: var(--active-bg-color);
+    //   box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+    // }
+  }
 //
 
-@mixin button-arrow($bg, $color,$border-color) {
+@mixin button($bg, $color) {
     font-weight: 400;
     font-size: var(--regular-font);
-    padding: 14px 32px;
+    padding: 15px 30px;
     background: $bg;
     color: $color;
-    display: inline-flex;
     line-height: 120%;
-    gap: 10px;
     font-weight: 500;
-    border-radius: 10px;
-    border: 1px solid $border-color;
-    align-items: center;
-    justify-content: center;
+    border-radius: 8px;
 
-    &:hover {
-        background: darken($bg, 8%);
-        transition: all 0.3s ease;
-    }
+    // &:hover {
+    //     background: rgba($bg, 0.92); // Slightly darken the background
+    //     transition: all 0.3s ease;
+    // }
 
-    &:active {
-        background: darken($bg, 25%);
-    }
+    // &:active {
+    //     background: rgba($bg, 0.75); // Darken the background more
+    // }
 
 }
 

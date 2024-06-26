@@ -2,3 +2,31 @@ extends layout/app
 
 block page 
    include chunk/header
+   main.main
+      section.hero
+         .hero__bg 
+            img(src="/img/bg-ring.svg", alt="")
+         .container.hero__container 
+            .hero__content 
+               span.span-computex [computex]
+               h1 сервисный центр по ремонту техники
+               p Мы быстро и профессионально отремонтируем любое электронное устройство с гарантией. Отремонтируем, настроим, установим бытовую технику у Вас дома, на даче или на работе.
+               a(href="./all-services.html") 
+                  .pulsating-circle >
+                  span Все услуги
+            .hero__img 
+               img(src="img/hero-services.png" alt="") 
+      section.service-links
+         .container.service-links__container 
+            a(href="").service-links__link
+               h2 ремонт ноутбуков
+            a(href="").service-links__link
+               h2 заправка катриджей 
+            a(href="").service-links__link
+               h2 ремонт принтеров
+            a(href="").service-links__link
+               h2 чистка ноутбуков
+            a(href="").service-links__link
+               h2 ремонт компьютера
+            a(href="").service-links__link
+               h2 Замена матрицы и по

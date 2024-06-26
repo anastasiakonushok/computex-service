@@ -5,11 +5,74 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>computex</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
-    <header>
-      <h2>Это заголовок</h2>
+    <header class="header">
+      <div class="header-top">
+        <div class="container flex header-top__container"><a class="header-top__logo" href="./index.html"><img src="img/logo.svg" alt="logo"></a><a class="flex header-top__info header-top__info--location" href=""><span class="icon flex"> 
+              <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M12.0303 21.5C12.0303 21.5 18.0303 15.2 18.0303 9.5C18.0303 6.18629 15.344 3.5 12.0303 3.5C8.71656 3.5 6.03027 6.18629 6.03027 9.5C6.03027 15.2 12.0303 21.5 12.0303 21.5Z" stroke="currentColor" stroke-width="2"></path>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M12.0303 10.5C12.5826 10.5 13.0303 10.0523 13.0303 9.5C13.0303 8.94772 12.5826 8.5 12.0303 8.5C11.478 8.5 11.0303 8.94772 11.0303 9.5C11.0303 10.0523 11.478 10.5 12.0303 10.5Z" stroke="currentColor" stroke-width="2"></path>
+              </svg></span><span class="text">Гомель, Кирова,35</span></a>
+          <div class="header-top__info header-top__info--phone flex"> <span class="icon flex">
+              <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3.54 2.5C3.6 3.39 3.75 4.26 3.99 5.09L2.79 6.29C2.38 5.09 2.12 3.82 2.03 2.5H3.54V2.5ZM13.4 14.52C14.25 14.76 15.12 14.91 16 14.97V16.46C14.68 16.37 13.41 16.11 12.2 15.71L13.4 14.52V14.52ZM4.5 0.5H1C0.45 0.5 0 0.95 0 1.5C0 10.89 7.61 18.5 17 18.5C17.55 18.5 18 18.05 18 17.5V14.01C18 13.46 17.55 13.01 17 13.01C15.76 13.01 14.55 12.81 13.43 12.44C13.33 12.4 13.22 12.39 13.12 12.39C12.86 12.39 12.61 12.49 12.41 12.68L10.21 14.88C7.38 13.43 5.06 11.12 3.62 8.29L5.82 6.09C6.1 5.81 6.18 5.42 6.07 5.07C5.7 3.95 5.5 2.75 5.5 1.5C5.5 0.95 5.05 0.5 4.5 0.5Z" fill="currentColor"></path>
+              </svg></span><a href="#">8 (0232) 32-51-31</a><a href="#">+375 (29) 984-27-37 </a></div>
+          <div class="header-top__info header-top__info--time flex"><span class="icon flex"> 
+              <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M22 12.5C22 18.0228 17.5228 22.5 12 22.5C6.47715 22.5 2 18.0228 2 12.5C2 6.97715 6.47715 2.5 12 2.5C17.5228 2.5 22 6.97715 22 12.5Z" stroke="currentColor" stroke-width="2"></path>
+                <path d="M12 5.5V12.5L16 16.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+              </svg></span><span class="text">
+               Пн - Пт (9.00 - 18.00); <br>сб, вс - вых.</span></div>
+          <div class="burger-menu"> <span> </span><span> </span><span> </span></div>
+        </div>
+      </div>
+      <div class="header-bottom">
+        <div class="container header-bottom__container flex">
+          <nav class="nav header-bottom__nav">
+            <ul class="nav__list flex">      
+              <li class="nav__item menu-item-has-children"><a class="nav__link" href="#">Другие услуги</a>
+                <ul class="sub-menu">
+                  <li class="nav__item"> <a class="nav__link" href="./services-installation.html">Монтаж кондиционеров</a></li>
+                  <li class="nav__item"> <a class="nav__link" href="./services-service.html">Обслуживание кондиционеров</a></li>
+                  <li class="nav__item"> <a class="nav__link" href="./services-repair.html">Ремонт кондиционеров</a></li>
+                </ul>
+              </li>
+              <li class="nav__item"><a class="nav__link" href="./about.html">О компании</a></li>
+              <li class="nav__item"><a class="nav__link" href="./pay-page.html">Оплата и гарантия</a></li>
+              <li class="nav__item"><a class="nav__link" href="./law-page.html">Юридические лица    </a></li>
+              <li class="nav__item"> <a class="nav__link" href="./contact.html">Контакты</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
     </header>
+    <main class="main">
+      <section class="hero">
+        <div class="hero__bg"> <img src="/img/bg-ring.svg" alt=""></div>
+        <div class="container hero__container"> 
+          <div class="hero__content"> <span class="span-computex">[computex]</span>
+            <h1>сервисный центр по ремонту техники</h1>
+            <p>Мы быстро и профессионально отремонтируем любое электронное устройство с гарантией. Отремонтируем, настроим, установим бытовую технику у Вас дома, на даче или на работе.</p><a href="./all-services.html"> 
+              <div class="pulsating-circle">></div><span>Все услуги</span></a>
+          </div>
+          <div class="hero__img"> <img src="img/hero-services.png" alt=""></div>
+        </div>
+      </section>
+      <section class="service-links">
+        <div class="container service-links__container"> <a class="service-links__link" href="">
+            <h2>ремонт ноутбуков</h2></a><a class="service-links__link" href="">
+            <h2>заправка катриджей </h2></a><a class="service-links__link" href="">
+            <h2>ремонт принтеров</h2></a><a class="service-links__link" href="">
+            <h2>чистка ноутбуков</h2></a><a class="service-links__link" href="">
+            <h2>ремонт компьютера</h2></a><a class="service-links__link" href="">
+            <h2>Замена матрицы и по</h2></a></div>
+      </section>
+    </main>
   </body>
 </html>

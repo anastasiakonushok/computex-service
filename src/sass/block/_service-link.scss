@@ -1,0 +1,13 @@
+.service-links {
+    padding: 90px 0px;
+    &__container {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(2,1fr);
+        gap: 30px;
+    }
+    &__link {
+        background:var(--white-color);
+        padding: 30px;
+    }
+}
