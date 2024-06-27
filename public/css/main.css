@@ -156,16 +156,17 @@ table {
   --main-white: #ffffff;
   --body-font: "Open Sans", sans-serif;
   --title-font: "Montserrat", sans-serif;
-  --h1-special: 2.5em;
+  --h1-special: 2.8em;
   --h1-font: 2em;
   --h2-font: 1.5em;
   --h3-font: 1.25em;
   --regular-font: 1em;
+  --second-font: 1.5em;
   --font-128: 5em;
 }
 
 .section-advantages {
-  padding: 60px 0px;
+  padding: 90px 0px;
   background-repeat: no-repeat;
   background-position: center 70%;
   background-size: cover;
@@ -722,7 +723,7 @@ p {
 .hero__bg {
   position: absolute;
   z-index: 1;
-  left: 55%;
+  left: 58%;
 }
 
 .hero__container {
@@ -738,10 +739,10 @@ p {
 }
 
 .hero__container h1 {
+  font: 900 var(--h1-special)/100% "Mulish", sans-serif;
   text-transform: uppercase;
   margin-bottom: 60px;
   color: var(--main-orange);
-  font-size: var(--h1-special);
 }
 
 .hero__container h2 {
@@ -753,7 +754,8 @@ p {
 
 .hero__container p {
   color: var(--main-dark);
-  width: 70%;
+  width: 80%;
+  font-weight: 500;
 }
 
 .hero__btn {
@@ -782,13 +784,13 @@ p {
 }
 
 .hero__content {
-  width: 57%;
+  width: 60%;
 }
 
 .hero__img {
   position: absolute;
   right: 0;
-  width: 40%;
+  width: 35%;
 }
 
 .hero__img img {
@@ -997,7 +999,7 @@ p {
 }
 
 .accordion:not(:last-child) .accordion__title {
-  padding: 20px 0px;
+  padding: 30px 0px;
 }
 
 .accordion:last-child .accordion__title {
@@ -1112,6 +1114,10 @@ p {
 }
 
 @media only screen and (min-width: 1024px) {
+  .section-advantages {
+    background-attachment: fixed;
+  }
+
   .header-top a:hover {
     -webkit-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
@@ -1235,6 +1241,16 @@ p {
 }
 }
 
+@media only screen and (max-width: 1247px) {
+  :root {
+    --h1-special: 2.5em;
+  }
+
+@supports (-webkit-appearance:none) {
+
+}
+}
+
 @media only screen and (max-width: 1023px) {
   :root {
     --h1-special: 2em;
@@ -1242,6 +1258,7 @@ p {
     --h2-font: 1.3em;
     --h3-font: 1.1em;
     --font-128: 3em;
+    --second-font: 1em;
   }
 
   .section-advantages__container {
@@ -1249,7 +1266,7 @@ p {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    gap: 30px;
+    gap: 60px;
   }
 
   .section-advantages__block span {
@@ -1503,6 +1520,7 @@ p {
     --h2-font: 1.1em;
     --h3-font: 1em;
     --font-128: 2em;
+    --second-font: 1em;
   }
 
 @supports (-webkit-appearance:none) {

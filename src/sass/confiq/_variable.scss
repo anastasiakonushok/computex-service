@@ -16,20 +16,24 @@
     --title-font: 'Montserrat', sans-serif;
 
     //font-size
-    --h1-special: 2.5em;
+    --h1-special: 2.8em;
     --h1-font: 2em;
     --h2-font: 1.5em;
     --h3-font: 1.25em;
     --regular-font: 1em;
+    --second-font: 1.5em;
     --font-128:5em;
 
-
+    @include mq(desktop, max) {
+        --h1-special: 2.5em;
+    }
     @include mq(tablet-wide, max) {
         --h1-special: 2em;
         --h1-font: 2em;
         --h2-font: 1.3em;
         --h3-font: 1.1em;
         --font-128:3em;
+        --second-font: 1em;
     }
     @include mq(phablet, max) {
         --h1-special: 1.8em;
@@ -37,5 +41,6 @@
         --h2-font: 1.1em;
         --h3-font: 1em;
         --font-128:2em;
+        --second-font: 1em;
     }
 }

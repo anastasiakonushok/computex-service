@@ -1,5 +1,5 @@
 .section-advantages{
-    padding: 60px 0px;
+    padding: 90px 0px;
     background-repeat: no-repeat;
     background-position: center 70%;
     background-size: cover;
@@ -17,12 +17,16 @@
         }
     }
 }
-
+@include mq(tablet-wide, min) {
+    .section-advantages {
+        background-attachment:fixed;
+    }
+}
 @include mq(tablet-wide, max) {
     .section-advantages {
         &__container {
            flex-direction: column;
-           gap: 30px;
+           gap: 60px;
         }
         &__block {
             

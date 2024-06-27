@@ -10,7 +10,7 @@
     &__bg {
         position: absolute;
         z-index: 1;
-        left: 55%;
+        left: 58%;
     }
     &__container {
         z-index: 10;
@@ -24,6 +24,9 @@
             margin-bottom: 60px;
             color:var(--main-orange);
             font-size: var(--h1-special);
+            font-family: "Mulish", sans-serif;
+            line-height: 100%;
+            font-weight: 900;
         }
         h2 {
             text-transform: uppercase;
@@ -33,7 +36,8 @@
         }
         p {
             color:var(--main-dark);
-            width: 70%;
+            width: 80%;
+            font-weight: 500;
         }
     }
     &__btn {
@@ -53,12 +57,12 @@
         }
     }
     &__content {
-        width: 57%;
+        width: 60%;
     }
     &__img {
         position: absolute;
         right: 0;
-        width: 40%;
+        width: 35%;
         // height: 100%;
         img {
             // max-height: 350px;
