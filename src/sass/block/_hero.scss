@@ -21,7 +21,7 @@
         // height: 76%;
         h1 {
             text-transform: uppercase;
-            margin-bottom: 30px;
+            margin-bottom: 60px;
             color:var(--main-orange);
             font-size: var(--h1-special);
         }
@@ -129,7 +129,15 @@
     }
 
 }
-
+.circle {
+    position: absolute;
+    height: 160px;
+    width: 160px;
+    top: 5%;
+    left: 25%;
+    animation: rotate 20s linear infinite;
+    overflow: hidden;
+}
 
 .btn {
     display: flex;
@@ -195,4 +203,8 @@
     }
   }
 
- 
+  @keyframes rotate {
+    to {
+        transform: rotate(-360deg);
+    }
+  }

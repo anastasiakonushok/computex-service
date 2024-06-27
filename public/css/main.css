@@ -474,7 +474,7 @@ p {
   line-height: 110%;
   font-weight: 700;
   text-transform: uppercase;
-  margin-bottom: 15px;
+  margin-bottom: 30px;
   display: inline-block;
   color: #B4B4B4;
   opacity: 0.7;
@@ -739,7 +739,7 @@ p {
 
 .hero__container h1 {
   text-transform: uppercase;
-  margin-bottom: 30px;
+  margin-bottom: 60px;
   color: var(--main-orange);
   font-size: var(--h1-special);
 }
@@ -814,6 +814,17 @@ p {
 
 .hero-services h1 {
   color: var(--main-white);
+}
+
+.circle {
+  position: absolute;
+  height: 160px;
+  width: 160px;
+  top: 5%;
+  left: 25%;
+  -webkit-animation: rotate 20s linear infinite;
+  animation: rotate 20s linear infinite;
+  overflow: hidden;
 }
 
 .btn {
@@ -915,6 +926,20 @@ p {
     -webkit-transform: scale(10);
     transform: scale(10);
     opacity: 0;
+  }
+}
+
+@-webkit-keyframes rotate {
+  to {
+    -webkit-transform: rotate(-360deg);
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes rotate {
+  to {
+    -webkit-transform: rotate(-360deg);
+    transform: rotate(-360deg);
   }
 }
 
