@@ -17,3 +17,18 @@
         }
     }
 }
+
+@include mq(tablet-wide, max) {
+    .section-advantages {
+        &__container {
+           flex-direction: column;
+           gap: 30px;
+        }
+        &__block {
+            
+            span {
+                width: 100%;
+            }
+        }
+    }
+}

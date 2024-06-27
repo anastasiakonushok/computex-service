@@ -10,7 +10,8 @@
         background:var(--white-color);
         transition: all 0.4s ease;
         padding: 30px;
-        border-radius:8px;
+        position: relative;
+        border-radius:15px;
         box-shadow: 2px -1px 13px 6px rgba(190, 188, 188, 0.22);
 
         img {
@@ -25,6 +26,13 @@
             text-transform: uppercase;
             margin-bottom: 30px;
         }
+    }
+    &__arrow {
+        position: absolute;
+        right: 15px;
+        bottom:15px;
+        display: none;
+        transition: all 0.3s ease;
     }
 }
 
@@ -42,7 +50,20 @@
                     transform: scale(1.1);
                     transition: all 0.3s ease;
                 }
+                .service-links__arrow {
+                    display: block;
+                    transition: all 0.3s ease;
+                }
             }  
+        }
+    }
+}
+
+@include mq(tablet-wide, max) {
+    .service-links {
+        &__container {
+            grid-template-columns: repeat(1,1fr);
+            grid-template-rows: repeat(6,1fr);
         }
     }
 }
