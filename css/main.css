@@ -823,7 +823,7 @@ p {
   height: 160px;
   width: 160px;
   top: 5%;
-  left: 25%;
+  left: 20%;
   -webkit-animation: rotate 20s linear infinite;
   animation: rotate 20s linear infinite;
   overflow: hidden;
