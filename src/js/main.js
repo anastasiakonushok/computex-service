@@ -10,6 +10,40 @@ $(function () {
         });
     });
 
+    ymaps.ready(init);
+    function init() {
+        // Создание карты.
+        var myMap = new ymaps.Map("map", {
+            // Координаты центра карты.
+            // Порядок по умолчанию: «широта, долгота».
+            // Чтобы не определять координаты центра карты вручную,
+            // воспользуйтесь инструментом Определение координат.
+            center: [52.432777404785156, 31.00490379333496],
+            // Уровень масштабирования. Допустимые значения:
+            // от 0 (весь мир) до 19.
+            zoom: 17,
+            controls: ['zoomControl']
+        });
+        myMap.behaviors.disable('scrollZoom');
+        var zoomControl = myMap.controls.get('zoomControl');
+        zoomControl.options.set({
+            size: 'small' // или 'large' для больших кнопок
+        });
+
+        var myPlacemark = new ymaps.GeoObject({
+            geometry: {
+                type: "Point",
+                coordinates: [52.432777404785156, 31.00490379333496]
+            }
+        },
+            {
+                // preset: 'twirl#redIcon',
+                iconImageSize: [80, 120],
+                iconColor: '#FF4C00'// Желтый цвет отметки (в формате HEX)
+            });
+        myMap.geoObjects.add(myPlacemark);
+    }
+
     $(document).ready(function () {
         $(function () {
             //BEGIN

@@ -1,0 +1,64 @@
+.map-section {
+    // height: 350px;
+    position: relative;
+    &__wrapp {
+      padding: 60px 0px;
+      background:var(--main-orange);
+      width: 100%;
+    }
+    &__info {
+      justify-content: space-between;
+    }
+    &__container {
+      position: relative;
+    }
+    &__row {
+      align-items:center;
+      gap:10px;
+      color:var(--main-gray);
+      .text {
+        @include regular;
+        font-weight: 600;
+        color:var(--main-white);
+      }
+      .icon {
+        color:var(--main-white);
+      }
+    }
+    &__card {
+      h3 {
+        margin-bottom: 30px;
+        color:var(--main-white);
+      }
+    }
+    &__social {
+      color:var(--main-white);
+    }
+    &__phons {
+      flex-direction: column;
+      gap: 15px;
+    }
+}
+
+#map {
+  height: 300px;
+  
+}
+.ymaps-2-1-79-ground-pane {
+  filter: grayscale(100%);
+}
+// .ymaps-2-1-79-svg-icon {
+//   /* Ваши стили для отметки */
+//   filter: none;
+// }
+
+
+
+  @include mq(tablet-wide, max) {
+    .map-section {
+      &__info {
+        flex-direction: column;
+        gap: 30px;
+      }
+    }
+  }
