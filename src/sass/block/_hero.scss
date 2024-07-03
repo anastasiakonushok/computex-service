@@ -11,6 +11,12 @@
         position: absolute;
         z-index: 1;
         left: 58%;
+        // top: -50%;
+
+        img {
+            // height: 1100px;
+            object-fit: cover;
+        }
     }
     &__container {
         z-index: 10;
@@ -90,6 +96,11 @@
 }
 @include mq(tablet-wide, min) {
     .hero {
+        &__bg {
+            img {
+                height: 1100px;
+            }  
+        }
         &__btn {
             @include hover {
                 background:var(--main-orange);
@@ -121,7 +132,11 @@
 }
 @include mq(tablet-wide, max) {
     .hero {
+        height: calc(100vh - 62px);
         background-position: 80% 50%;
+        &__bg {
+            display: none;
+        }
         &__img {
             display: none;
         }
@@ -130,8 +145,15 @@
                 width: 100%;
             }
         }
+        &__content {
+            width: 100%;
+        }
     }
-
+    .circle {
+        top:70%;
+        // bottom: 10%;
+        left: 50%;
+    }
 }
 .circle {
     position: absolute;

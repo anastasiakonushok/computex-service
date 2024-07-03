@@ -1,5 +1,6 @@
 .reference {
     padding: 90px 0px;
+    background: var(--main-white);
 
     h2 {
         color: var(--dark-color);
@@ -63,7 +64,7 @@
     }
 
     .accordion__body {
-        padding-top: 20px;
+        margin-top: 20px;
     }
 }
 
