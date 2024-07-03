@@ -103,18 +103,8 @@
         }
         &__btn {
             @include hover {
-                background:var(--main-orange);
-                border-radius:8px;
-                background: linear-gradient(to right, var(--main-orange) 50%, var(--main-orange) 50%);
-                transition: all 0.5s ease;
-                .btn {
-                    background:none;
-                }
-                .btn::before {
-                    content:none;
-                }
                 .btn-text {
-                    color:var(--main-white);
+                    color:var(--main-orange);
                 }
             }
         }

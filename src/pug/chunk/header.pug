@@ -1,61 +1,67 @@
 header.header
-  .header-top
-    .container.flex.header-top__container
-      a(href="./index.html").header-top__logo
-        img(src="img/logo.svg" alt="logo")
-      a(href="").flex.header-top__info.header-top__info--location
-        span.icon.flex 
-          svg(width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg")
-            path(fill-rule="evenodd" clip-rule="evenodd" d="M12.0303 21.5C12.0303 21.5 18.0303 15.2 18.0303 9.5C18.0303 6.18629 15.344 3.5 12.0303 3.5C8.71656 3.5 6.03027 6.18629 6.03027 9.5C6.03027 15.2 12.0303 21.5 12.0303 21.5Z" stroke="currentColor" stroke-width="2")
-            path(fill-rule="evenodd" clip-rule="evenodd" d="M12.0303 10.5C12.5826 10.5 13.0303 10.0523 13.0303 9.5C13.0303 8.94772 12.5826 8.5 12.0303 8.5C11.478 8.5 11.0303 8.94772 11.0303 9.5C11.0303 10.0523 11.478 10.5 12.0303 10.5Z" stroke="currentColor" stroke-width="2")
-        span.text Гомель, Кирова,35
-      .header-top__info.header-top__info--phone.flex 
-        span.icon.flex
-          svg(width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg")
-            path(d="M3.54 2.5C3.6 3.39 3.75 4.26 3.99 5.09L2.79 6.29C2.38 5.09 2.12 3.82 2.03 2.5H3.54V2.5ZM13.4 14.52C14.25 14.76 15.12 14.91 16 14.97V16.46C14.68 16.37 13.41 16.11 12.2 15.71L13.4 14.52V14.52ZM4.5 0.5H1C0.45 0.5 0 0.95 0 1.5C0 10.89 7.61 18.5 17 18.5C17.55 18.5 18 18.05 18 17.5V14.01C18 13.46 17.55 13.01 17 13.01C15.76 13.01 14.55 12.81 13.43 12.44C13.33 12.4 13.22 12.39 13.12 12.39C12.86 12.39 12.61 12.49 12.41 12.68L10.21 14.88C7.38 13.43 5.06 11.12 3.62 8.29L5.82 6.09C6.1 5.81 6.18 5.42 6.07 5.07C5.7 3.95 5.5 2.75 5.5 1.5C5.5 0.95 5.05 0.5 4.5 0.5Z" fill="currentColor")
-        a(href="#") 8 (0232) 32-51-31
-        a(href="#") +375 (29) 984-27-37 
-      .header-top__info.header-top__info--time.flex
-        span.icon.flex 
-          svg(width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg")
-            path(
-              d="M22 12.5C22 18.0228 17.5228 22.5 12 22.5C6.47715 22.5 2 18.0228 2 12.5C2 6.97715 6.47715 2.5 12 2.5C17.5228 2.5 22 6.97715 22 12.5Z"
-              stroke="currentColor"
-              stroke-width="2"
-            )
-            path(
-              d="M12 5.5V12.5L16 16.5"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-            )
-        span.text 
-          | Пн - Пт (9.00 - 18.00); 
-          br 
-          | сб, вс - вых.
-      .burger-menu 
-        span 
-        span 
-        span 
-  .header-bottom
-    .container.header-bottom__container.flex
-      nav.nav.header-bottom__nav
-        ul.nav__list.flex       
-          li.nav__item.menu-item-has-children
-            a(href="#").nav__link Другие услуги
-            ul.sub-menu
-              li.nav__item  
-                a(href="./services-installation.html").nav__link Монтаж кондиционеров
-              li.nav__item  
-                a(href="./services-service.html").nav__link Обслуживание кондиционеров
-              li.nav__item  
-                a(href="./services-repair.html").nav__link Ремонт кондиционеров
-          li.nav__item
-            a(href="./about.html").nav__link О компании
-          li.nav__item
-            a(href="./pay-page.html").nav__link Оплата и гарантия
-          li.nav__item
-            a(href="./law-page.html").nav__link Юридические лица    
-          li.nav__item 
-            a(href="./contact.html").nav__link Контакты
+    .header-top
+        .container.flex.header-top__container
+            a(href="./index.html").header-top__logo
+                img(src="img/logo.svg" alt="logo")
+            a(href="").flex.header-top__info.header-top__info--location
+                span.icon.flex 
+                    svg(width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg")
+                        path(fill-rule="evenodd" clip-rule="evenodd" d="M12.0303 21.5C12.0303 21.5 18.0303 15.2 18.0303 9.5C18.0303 6.18629 15.344 3.5 12.0303 3.5C8.71656 3.5 6.03027 6.18629 6.03027 9.5C6.03027 15.2 12.0303 21.5 12.0303 21.5Z" stroke="currentColor" stroke-width="2")
+                        path(fill-rule="evenodd" clip-rule="evenodd" d="M12.0303 10.5C12.5826 10.5 13.0303 10.0523 13.0303 9.5C13.0303 8.94772 12.5826 8.5 12.0303 8.5C11.478 8.5 11.0303 8.94772 11.0303 9.5C11.0303 10.0523 11.478 10.5 12.0303 10.5Z" stroke="currentColor" stroke-width="2")
+                span.text Гомель, Кирова,35
+            .header-top__info.header-top__info--phone.flex 
+                span.icon.flex
+                    svg(width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg")
+                        path(d="M3.54 2.5C3.6 3.39 3.75 4.26 3.99 5.09L2.79 6.29C2.38 5.09 2.12 3.82 2.03 2.5H3.54V2.5ZM13.4 14.52C14.25 14.76 15.12 14.91 16 14.97V16.46C14.68 16.37 13.41 16.11 12.2 15.71L13.4 14.52V14.52ZM4.5 0.5H1C0.45 0.5 0 0.95 0 1.5C0 10.89 7.61 18.5 17 18.5C17.55 18.5 18 18.05 18 17.5V14.01C18 13.46 17.55 13.01 17 13.01C15.76 13.01 14.55 12.81 13.43 12.44C13.33 12.4 13.22 12.39 13.12 12.39C12.86 12.39 12.61 12.49 12.41 12.68L10.21 14.88C7.38 13.43 5.06 11.12 3.62 8.29L5.82 6.09C6.1 5.81 6.18 5.42 6.07 5.07C5.7 3.95 5.5 2.75 5.5 1.5C5.5 0.95 5.05 0.5 4.5 0.5Z" fill="currentColor")
+                a(href="#") 8 (0232) 32-51-31
+                a(href="#") +375 (29) 984-27-37 
+            .header-top__info.header-top__info--time.flex
+                span.icon.flex 
+                    svg(width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg")
+                        path(
+                            d="M22 12.5C22 18.0228 17.5228 22.5 12 22.5C6.47715 22.5 2 18.0228 2 12.5C2 6.97715 6.47715 2.5 12 2.5C17.5228 2.5 22 6.97715 22 12.5Z"
+                            stroke="currentColor"
+                            stroke-width="2"
+                        )
+                        path(
+                            d="M12 5.5V12.5L16 16.5"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                        )
+                span.text 
+                    | Пн - Пт (9.00 - 18.00); 
+                    br 
+                    | сб, вс - вых.
+            .burger-menu 
+                span 
+                span 
+                span 
+    .header-bottom
+        .container.header-bottom__container.flex
+            nav.nav.header-bottom__nav
+                ul.nav__list.flex       
+                    li.nav__item.menu-item-has-children
+                        a(href="#").nav__link Другие услуги
+                        ul.sub-menu
+                            li.nav__item  
+                                a(href="./services-installation.html").nav__link Ремонт ноутбуков
+                            li.nav__item  
+                                a(href="./services-service.html").nav__link Заправка катриджей
+                            li.nav__item  
+                                a(href="./services-repair.html").nav__link Ремонт принтеров
+                            li.nav__item  
+                                a(href="./services-repair.html").nav__link Чистка ноутбуков
+                            li.nav__item  
+                                a(href="./services-repair.html").nav__link Ремонт компьютеров
+                            li.nav__item  
+                                a(href="./services-repair.html").nav__link Замена матрицы и ПО
+                    li.nav__item
+                        a(href="./about.html").nav__link О компании
+                    li.nav__item
+                        a(href="./pay-page.html").nav__link Оплата и гарантия
+                    li.nav__item
+                        a(href="./law-page.html").nav__link Юридические лица    
+                    li.nav__item 
+                        a(href="./contact.html").nav__link Контакты
 
