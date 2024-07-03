@@ -1,0 +1,12 @@
+extends layout/app
+
+block page 
+    include chunk/header
+    main.main 
+        section.hero-service 
+            .container.hero-service__container 
+                span.span-computex [ computex ]
+                h1 О компании
+                a(href="./contact.html") заказать 
+                img(src="", alt="")
+    include chunk/footer

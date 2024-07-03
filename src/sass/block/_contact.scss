@@ -49,3 +49,14 @@
         color:var(--main-yellow);
     }
 }
+// @include mq(tablet-wide, min) {
+
+// }
+@include mq(tablet-wide, max) {
+    .section-contact {
+        flex-direction: column;
+        &__column {
+            grid-template-columns: 1fr;
+        }
+    }
+}
