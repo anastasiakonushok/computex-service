@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>computex</title>
+    <link rel="icon" type="image/x-icon" href="/img/favicon-1.svg">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=4db04c29-57a4-4ebd-af68-af6643fe7e68&amp;lang=ru_RU"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,900;1,900&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-top">
+        <div class="container flex header-top__container"><a class="header-top__logo" href="./index.html"><img src="img/logo.svg" alt="logo"></a><a class="flex header-top__info header-top__info--location" href=""><span class="icon flex"> 
+              <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M12.0303 21.5C12.0303 21.5 18.0303 15.2 18.0303 9.5C18.0303 6.18629 15.344 3.5 12.0303 3.5C8.71656 3.5 6.03027 6.18629 6.03027 9.5C6.03027 15.2 12.0303 21.5 12.0303 21.5Z" stroke="currentColor" stroke-width="2"></path>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M12.0303 10.5C12.5826 10.5 13.0303 10.0523 13.0303 9.5C13.0303 8.94772 12.5826 8.5 12.0303 8.5C11.478 8.5 11.0303 8.94772 11.0303 9.5C11.0303 10.0523 11.478 10.5 12.0303 10.5Z" stroke="currentColor" stroke-width="2"></path>
+              </svg></span><span class="text">Гомель, Кирова,35</span></a>
+          <div class="header-top__info header-top__info--phone flex"> <span class="icon flex">
+              <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3.54 2.5C3.6 3.39 3.75 4.26 3.99 5.09L2.79 6.29C2.38 5.09 2.12 3.82 2.03 2.5H3.54V2.5ZM13.4 14.52C14.25 14.76 15.12 14.91 16 14.97V16.46C14.68 16.37 13.41 16.11 12.2 15.71L13.4 14.52V14.52ZM4.5 0.5H1C0.45 0.5 0 0.95 0 1.5C0 10.89 7.61 18.5 17 18.5C17.55 18.5 18 18.05 18 17.5V14.01C18 13.46 17.55 13.01 17 13.01C15.76 13.01 14.55 12.81 13.43 12.44C13.33 12.4 13.22 12.39 13.12 12.39C12.86 12.39 12.61 12.49 12.41 12.68L10.21 14.88C7.38 13.43 5.06 11.12 3.62 8.29L5.82 6.09C6.1 5.81 6.18 5.42 6.07 5.07C5.7 3.95 5.5 2.75 5.5 1.5C5.5 0.95 5.05 0.5 4.5 0.5Z" fill="currentColor"></path>
+              </svg></span><a href="#">8 (0232) 32-51-31</a><a href="#">+375 (29) 984-27-37 </a></div>
+          <div class="header-top__info header-top__info--time flex"><span class="icon flex"> 
+              <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M22 12.5C22 18.0228 17.5228 22.5 12 22.5C6.47715 22.5 2 18.0228 2 12.5C2 6.97715 6.47715 2.5 12 2.5C17.5228 2.5 22 6.97715 22 12.5Z" stroke="currentColor" stroke-width="2"></path>
+                <path d="M12 5.5V12.5L16 16.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+              </svg></span><span class="text">
+               Пн - Пт (9.00 - 18.00); <br>сб, вс - вых.</span></div>
+          <div class="burger-menu"> <span> </span><span> </span><span> </span></div>
+        </div>
+      </div>
+      <div class="header-bottom">
+        <div class="container header-bottom__container flex">
+          <nav class="nav header-bottom__nav">
+            <ul class="nav__list flex">      
+              <li class="nav__item menu-item-has-children"><a class="nav__link" href="#">Другие услуги</a>
+                <ul class="sub-menu">
+                  <li class="nav__item"> <a class="nav__link" href="./services-installation.html">Ремонт ноутбуков</a></li>
+                  <li class="nav__item"> <a class="nav__link" href="./services-service.html">Заправка катриджей</a></li>
+                  <li class="nav__item"> <a class="nav__link" href="./services-repair.html">Ремонт принтеров</a></li>
+                  <li class="nav__item"> <a class="nav__link" href="./services-repair.html">Чистка ноутбуков</a></li>
+                  <li class="nav__item"> <a class="nav__link" href="./services-repair.html">Ремонт компьютеров</a></li>
+                  <li class="nav__item"> <a class="nav__link" href="./services-repair.html">Замена матрицы и ПО</a></li>
+                </ul>
+              </li>
+              <li class="nav__item"><a class="nav__link" href="./about.html">О компании</a></li>
+              <li class="nav__item"><a class="nav__link" href="./pay-page.html">Оплата и гарантия</a></li>
+              <li class="nav__item"><a class="nav__link" href="./law-page.html">Юридические лица    </a></li>
+              <li class="nav__item"> <a class="nav__link" href="./contact.html">Контакты</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main class="main"> 
+      <section class="hero-service"> 
+        <div class="container hero-service__container"> <span class="span-computex">[ computex ]</span>
+          <h1>О компании</h1><a href="./contact.html">заказать </a><img src="" alt="">
+        </div>
+      </section>
+    </main>
+    <footer class="footer"> 
+      <div class="container footer__container">
+        <div class="footer__wrapp flex">
+          <div class="footer__contact nav-footer">
+            <h3>Остальные направления</h3>
+            <ul> 
+              <li><a href="">Кондиционеры</a></li>
+              <li><a href="">Сервисный центр  </a></li>
+              <li> <a href="">Печатный центр</a></li>
+            </ul>
+          </div>
+          <nav class="nav-footer">
+            <h3>Услуги</h3>
+            <ul> 
+              <li> <a href="./catalog.html">Каталог</a></li>
+              <li> <a href="./services-repair.html">Ремонт</a></li>
+              <li> <a href="./services-installation.html">Монтаж</a></li>
+              <li> <a href="./services-service.html">Обслуживание</a></li>
+            </ul>
+          </nav>
+          <nav class="nav-footer">
+            <h3>Информация </h3>
+            <ul> 
+              <li> <a href="./pay-page.html">Оплата и гарантия</a></li>
+              <li> <a href="./contact.html">Контакты</a></li>
+              <li> <a href="./about.html">О компании</a></li>
+              <li> <a href="./law-page.html">Юридические лица</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="button-up">
+          <svg width="16" height="19" viewBox="0 0 16 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M7 18C7 18.5523 7.44772 19 8 19C8.55228 19 9 18.5523 9 18L7 18ZM8.70711 0.292892C8.31658 -0.0976314 7.68342 -0.0976315 7.29289 0.292892L0.928933 6.65685C0.538408 7.04738 0.538408 7.68054 0.928933 8.07107C1.31946 8.46159 1.95262 8.46159 2.34315 8.07107L8 2.41421L13.6569 8.07107C14.0474 8.46159 14.6805 8.46159 15.0711 8.07107C15.4616 7.68054 15.4616 7.04738 15.0711 6.65686L8.70711 0.292892ZM9 18L9 1L7 1L7 18L9 18Z" fill="currentColor"></path>
+          </svg>
+        </div>
+        <div class="footer__copyright">
+          <p>
+             © 2024 "COMPUTEX".  </p>
+        </div>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js">  </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgIgQLwH5uT7d8aK2yjZedevRb-gbT_ug"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

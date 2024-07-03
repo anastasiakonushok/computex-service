@@ -487,6 +487,15 @@ p {
   opacity: 0.7;
 }
 
+.hero-service {
+  padding: 60px 0;
+  background: var(--main-orange);
+}
+
+.hero-service h1 {
+  color: var(--main-white);
+}
+
 .section-contact__block {
   -webkit-box-flex: 1;
   -ms-flex: 1;
@@ -1508,6 +1517,17 @@ p {
     padding-left: 15px;
     font-weight: bold;
     text-align: left;
+  }
+
+  .section-contact {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .section-contact__column {
+    grid-template-columns: 1fr;
   }
 
   .footer__wrapp {
