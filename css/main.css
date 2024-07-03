@@ -254,6 +254,7 @@ h1 {
   font-size: var(--h1-font);
   line-height: 110%;
   font-weight: 800;
+  text-transform: uppercase;
 }
 
 h2 {
@@ -482,8 +483,83 @@ p {
   text-transform: uppercase;
   margin-bottom: 30px;
   display: inline-block;
-  color: #B4B4B4;
+  color: rgba(255, 255, 255, 0.4470588235);
   opacity: 0.7;
+}
+
+.section-contact__block {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.section-contact__block #map {
+  height: 100%;
+}
+
+.section-contact__info {
+  padding: 30px 0px;
+  background: var(--main-orange);
+}
+
+.section-contact__info h1 {
+  color: var(--main-white);
+  margin-bottom: 30px;
+}
+
+.section-contact__info h3 {
+  margin-bottom: 15px;
+  color: var(--main-white);
+}
+
+.section-contact__column {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 30px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.section-contact__row {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 15px;
+  opacity: 0.8;
+}
+
+.section-contact .icon {
+  color: var(--main-white);
+}
+
+.section-contact .text {
+  font-size: var(--regular-font);
+  line-height: 140%;
+  font-weight: 400;
+  color: var(--main-white);
+  font-weight: 500;
+}
+
+.section-contact a {
+  font-size: var(--regular-font);
+  line-height: 140%;
+  font-weight: 400;
+  color: var(--main-white);
+  font-weight: 500;
+}
+
+.section-contact__phons {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.section-contact__social {
+  color: var(--main-yellow);
 }
 
 .footer {
@@ -1322,26 +1398,10 @@ p {
     -webkit-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
-    background: var(--main-orange);
-    border-radius: 8px;
-    background: -webkit-gradient(linear, left top, right top, color-stop(50%, var(--main-orange)), color-stop(50%, var(--main-orange)));
-    background: -o-linear-gradient(left, var(--main-orange) 50%, var(--main-orange) 50%);
-    background: linear-gradient(to right, var(--main-orange) 50%, var(--main-orange) 50%);
-    -webkit-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.5s ease;
-  }
-
-  .hero__btn:hover .btn {
-    background: none;
-  }
-
-  .hero__btn:hover .btn::before {
-    content: none;
   }
 
   .hero__btn:hover .btn-text {
-    color: var(--main-white);
+    color: var(--main-orange);
   }
 
   .service-links__link:hover {
