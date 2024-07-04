@@ -9,7 +9,7 @@ $(function () {
             $("body").toggleClass("body-lock");
         });
     });
-
+    AOS.init();
     ymaps.ready(init);
     function init() {
         // Создание карты.

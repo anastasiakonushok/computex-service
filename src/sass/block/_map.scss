@@ -16,6 +16,7 @@
       align-items:center;
       gap:10px;
       color:var(--main-gray);
+      opacity: 0.9;
       .text {
         @include regular;
         font-weight: 600;
@@ -33,6 +34,7 @@
     }
     &__social {
       color:var(--main-white);
+      opacity: 0.9;
     }
     &__phons {
       flex-direction: column;
@@ -52,7 +54,22 @@
 //   filter: none;
 // }
 
-
+@include mq(tablet-wide, min) {
+  .map-section {
+    &__row {
+        @include hover {
+            opacity: 1;
+            transition: all 0.3s ease;
+        }
+    }
+    &__social {
+       @include hover {
+            opacity: 1;
+            transition: all 0.3s ease;
+       }
+    }
+  }
+}
 
   @include mq(tablet-wide, max) {
     .map-section {

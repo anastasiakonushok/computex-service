@@ -1066,6 +1066,7 @@ p {
   align-items: center;
   gap: 10px;
   color: var(--main-gray);
+  opacity: 0.9;
 }
 
 .map-section__row .text {
@@ -1087,6 +1088,7 @@ p {
 
 .map-section__social {
   color: var(--main-white);
+  opacity: 0.9;
 }
 
 .map-section__phons {
@@ -1411,6 +1413,22 @@ p {
 
   .hero__btn:hover .btn-text {
     color: var(--main-orange);
+  }
+
+  .map-section__row:hover {
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    opacity: 1;
+    transition: all 0.3s ease;
+  }
+
+  .map-section__social:hover {
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    opacity: 1;
+    transition: all 0.3s ease;
   }
 
   .service-links__link:hover {
