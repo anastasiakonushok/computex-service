@@ -74,20 +74,26 @@ $(function () {
         var lastScrollTop = 0;
         $(window).scroll(function (event) {
             var st = $(this).scrollTop();
-            if (st > lastScrollTop) {
-                $(".header").addClass("header_down");
-                $(".header").removeClass("header_up");
-                $(".button-up").addClass("scroll-top_down");
-                $(".button-up").removeClass("scroll-top_up");
+            if (st > 200) { // Check if the scroll position is greater than 200px
+                if (st > lastScrollTop) {
+                    $(".header").addClass("header_down");
+                    $(".header").removeClass("header_up");
+                    $(".button-up").addClass("scroll-top_down");
+                    $(".button-up").removeClass("scroll-top_up");
+                } else {
+                    $(".header").addClass("header_up");
+                    $(".header").removeClass("header_down");
+                    $(".button-up").addClass("scroll-top_up");
+                    $(".button-up").removeClass("scroll-top_down");
+                }
             } else {
-                $(".header").addClass("header_up");
-                $(".header").removeClass("header_down");
-                $(".button-up").addClass("scroll-top_up");
-                $(".button-up").removeClass("scroll-top_down");
+                $(".header").removeClass("header_down header_up");
+                $(".button-up").removeClass("scroll-top_down scroll-top_up");
             }
             lastScrollTop = st;
         });
     });
+
 
     $(document).ready(function () {
         var lastScrollTopr = 0;

@@ -10,7 +10,7 @@
         background:var(--main-orange);
         h1 {
             color:var(--main-white);
-            margin-bottom: 30px;
+            margin-bottom: 60px;
         }
         h3 {
             margin-bottom: 15px;
@@ -26,7 +26,7 @@
     &__row {
         align-items:center;
         gap:15px;
-        opacity: 0.8;
+        opacity: 0.9;
     }
     .icon {
         color:var(--main-white);
@@ -52,6 +52,23 @@
 // @include mq(tablet-wide, min) {
 
 // }
+
+@include mq(tablet-wide, min) {
+    .section-contact {
+      &__row {
+          @include hover {
+              opacity: 1;
+              transition: all 0.3s ease;
+          }
+      }
+      &__social {
+         @include hover {
+              opacity: 1;
+              transition: all 0.3s ease;
+         }
+      }
+    }
+  }
 @include mq(tablet-wide, max) {
     .section-contact {
         flex-direction: column;
