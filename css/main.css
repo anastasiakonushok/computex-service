@@ -488,12 +488,97 @@ p {
 }
 
 .hero-service {
-  padding: 60px 0;
+  padding: 90px 0;
   background: var(--main-orange);
+  position: relative;
 }
 
 .hero-service h1 {
   color: var(--main-white);
+}
+
+.hero-service__img {
+  position: absolute;
+  height: 300px;
+  -o-object-fit: cover;
+  object-fit: cover;
+  display: block;
+  right: 10%;
+  top: 0;
+}
+
+.white-button {
+  background: var(--main-white);
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 15px 30px;
+  border-radius: 15px;
+  margin-top: 30px;
+}
+
+.white-button__text {
+  color: var(--main-orange);
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.title-words {
+  position: relative;
+  margin-bottom: 50px;
+  z-index: 1;
+}
+
+.title-words::before {
+  content: attr(title);
+  position: absolute;
+  z-index: -1;
+  font-size: var(--h1-special);
+  color: rgba(223, 222, 222, 0.2431372549);
+  text-transform: uppercase;
+  top: 0;
+  left: 15px;
+}
+
+.styled-table {
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 18px;
+  width: 100%;
+  border: 1px solid #ddd;
+}
+
+.styled-table thead tr {
+  background: var(--main-gray);
+  color: var(--dark-color);
+  text-align: left;
+  font-weight: bold;
+}
+
+.styled-table th,
+.styled-table td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+}
+
+.styled-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+  background: #f3f3f3;
+}
+
+.styled-table tbody tr:hover {
+  background: #f1f1f1;
+  cursor: pointer;
 }
 
 .section-contact__block {
@@ -513,7 +598,7 @@ p {
 
 .section-contact__info h1 {
   color: var(--main-white);
-  margin-bottom: 30px;
+  margin-bottom: 60px;
 }
 
 .section-contact__info h3 {
@@ -536,7 +621,7 @@ p {
   -ms-flex-align: center;
   align-items: center;
   gap: 15px;
-  opacity: 0.8;
+  opacity: 0.9;
 }
 
 .section-contact .icon {
@@ -1281,6 +1366,15 @@ p {
   transition: all 0.3s ease;
 }
 
+.service-price {
+  padding: 90px 0px;
+  background: var(--main-white);
+}
+
+.service-info {
+  padding: 90px 0px;
+}
+
 @supports (-webkit-appearance:none) {
   .accordion .show-accordion::after {
     background-image: url('data:image/svg+xml,%3Csvg width="35" height="5" viewBox="0 0 35 5" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Cline y1="2.5" x2="35" y2="2.5" stroke="%23FF4C00" stroke-width="4"/%3E%3C/svg%3E');
@@ -1339,6 +1433,22 @@ p {
     background-attachment: fixed;
   }
 
+  .section-contact__row:hover {
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    opacity: 1;
+    transition: all 0.3s ease;
+  }
+
+  .section-contact__social:hover {
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    opacity: 1;
+    transition: all 0.3s ease;
+  }
+
   .header-top a:hover {
     -webkit-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
@@ -1351,6 +1461,15 @@ p {
     -webkit-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
+  }
+
+  .header_up {
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    position: fixed;
+    -webkit-box-shadow: 0 8px 20px 0 rgba(2, 24, 44, 0.194);
+    box-shadow: 0 8px 20px 0 rgba(2, 24, 44, 0.194);
   }
 
   .nav__item:hover > .sub-menu {
@@ -1502,32 +1621,32 @@ p {
     border: none;
   }
 
-  thead {
+  .styled-table thead {
     display: none;
   }
 
-  tbody,
-  tr,
-  td {
+  .styled-table tbody,
+  .styled-table tr,
+  .styled-table td {
     display: block;
     width: 100%;
   }
 
-  tr {
+  .styled-table tr {
     margin-bottom: 15px;
   }
 
-  tr td:first-child {
+  .styled-table tr td:first-child {
     font-weight: 700;
   }
 
-  td {
+  .styled-table td {
     text-align: left;
     padding-left: 50%;
     position: relative;
   }
 
-  td::before {
+  .styled-table td::before {
     content: attr(data-label);
     position: absolute;
     left: 0;
