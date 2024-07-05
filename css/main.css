@@ -1468,7 +1468,7 @@ p {
     -webkit-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
-    color: var(--main-yellow);
+    color: var(--main-orange);
   }
 
 @supports (-webkit-appearance:none) {
@@ -1479,6 +1479,17 @@ p {
 @media only screen and (min-width: 1024px) {
   .section-advantages {
     background-attachment: fixed;
+  }
+
+  .white-button:hover {
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.8901960784);
+    gap: 30px;
+    -webkit-transition: all 0.6s ease;
+    -o-transition: all 0.6s ease;
+    transition: all 0.6s ease;
   }
 
   .section-contact__row:hover {
@@ -1576,6 +1587,7 @@ p {
     -webkit-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
+    gap: 30px;
   }
 
   .hero__btn:hover .btn-text {
@@ -1736,6 +1748,17 @@ p {
     padding-left: 15px;
     font-weight: bold;
     text-align: left;
+  }
+
+  .hero-service {
+    z-index: 10;
+  }
+
+  .hero-service__img {
+    height: 170px;
+    z-index: -1;
+    top: 10%;
+    right: 0;
   }
 
   .section-contact {
