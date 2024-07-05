@@ -255,6 +255,7 @@ p {
     position: relative;
     margin-bottom: 50px;
     z-index: 1;
+    color:var(--main-orange);
     &::before {
         content:attr(title);
         position: absolute;
@@ -326,8 +327,6 @@ p {
             font-weight: 700;
         }
         td {
-            text-align:left; // Текст выравнивается по правому краю
-            padding-left: 50%; // Отступ слева для имитации заголовка
             position: relative; // Позиционирование для псевдоэлемента
         
             &::before {

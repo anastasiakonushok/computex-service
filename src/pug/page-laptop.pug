@@ -12,14 +12,16 @@ block page
                     span.white-button__arrow
                         svg(width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg")
                             path(d="M0.313814 0.313814C0.694195 -0.0665668 1.28943 -0.101147 1.70887 0.210074L1.82904 0.313814L8.25761 6.74239C8.63799 7.12277 8.67257 7.718 8.36135 8.13745L8.25761 8.25761L1.82904 14.6862C1.41062 15.1046 0.732233 15.1046 0.313814 14.6862C-0.0665666 14.3058 -0.101146 13.7106 0.210074 13.2911L0.313814 13.171L5.98477 7.5L0.313814 1.82904C-0.104605 1.41062 -0.104605 0.732233 0.313814 0.313814Z" fill="#FA5B18")
-                img.hero-service__img(src="./img/computer-computex.png" alt="")
+                img.hero-service__img(src="./img/laptop-image.png" alt="")
         section.service-info 
             .container.service-info__container
                 h2.title-words(title="Ремонт") Ремонт ноутбуков 
-                .service-info__block.flex 
-                    p Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde quo magni dignissimos, consequatur enim placeat beatae id. Fugit facilis, amet, dolor inventore necessitatibus, ad nihil porro ut hic adipisci iusto.
-                    p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum tempore repellendus odit vel debitis enim possimus sapiente tenetur culpa labore. Totam numquam eos eum soluta architecto itaque eligendi. Magnam, consequuntur.
-                p Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta maiores consequatur ipsa, officia sint illum tenetur dolorum ratione corporis debitis omnis quis iste voluptatibus adipisci autem? Aperiam quam maiores perferendis!
+                .service-info__block
+                    .service-info__row.flex
+                        p Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde quo magni dignissimos, consequatur enim placeat beatae id. Fugit facilis, amet, dolor inventore necessitatibus, ad nihil porro ut hic adipisci iusto.
+                        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum tempore repellendus odit vel debitis enim possimus sapiente tenetur culpa labore. Totam numquam eos eum soluta architecto itaque eligendi. Magnam, consequuntur.
+                    .service-info__row
+                        p Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta maiores consequatur ipsa, officia sint illum tenetur dolorum ratione corporis debitis omnis quis iste voluptatibus adipisci autem? Aperiam quam maiores perferendis!Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta maiores consequatur ipsa, officia sint illum tenetur dolorum ratione corporis debitis omnis quis iste voluptatibus adipisci autem? Aperiam quam maiores perferendis!Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta maiores consequatur ipsa, officia sint illum tenetur dolorum ratione corporis debitis omnis quis iste voluptatibus adipisci autem? Aperiam quam maiores perferendis!
         section.service-price 
             .container 
                 h2.title-words(title="Цены") Цены на услуги
@@ -42,5 +44,6 @@ block page
                             tr 
                                 td Мотаж 2
                                 td 20 р
+        include chunk/section-all-link
         include chunk/map
     include chunk/footer
