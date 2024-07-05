@@ -103,6 +103,7 @@
         }
         &__btn {
             @include hover {
+                gap:30px;
                 .btn-text {
                     color:var(--main-orange);
                 }

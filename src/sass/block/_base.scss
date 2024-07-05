@@ -305,6 +305,15 @@ p {
         }
     }
 }
+@include mq(tablet-wide, min) { 
+    .white-button {
+        @include hover {
+            background:#ffffffe3;
+            gap: 30px;
+            transition: all 0.6s ease;
+        }
+    }
+}
 @include mq(tablet-wide, max) { 
     .styled-table {
         border:none;
@@ -340,5 +349,13 @@ p {
             }
         }
     }
-   
+    .hero-service {
+        z-index: 10;
+        &__img {
+            height: 170px;
+            z-index: -1;
+            top:10%;
+            right: 0;
+        }
+    }
 }
