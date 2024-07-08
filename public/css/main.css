@@ -491,6 +491,7 @@ p {
   padding: 90px 0;
   background: var(--main-orange);
   position: relative;
+  overflow: hidden;
 }
 
 .hero-service h1 {
@@ -499,12 +500,17 @@ p {
 
 .hero-service__img {
   position: absolute;
-  height: 300px;
+  height: 260px;
   -o-object-fit: cover;
   object-fit: cover;
   display: block;
   right: 10%;
-  top: 0;
+  top: 15%;
+  -webkit-transition: -webkit-transform 0.1s ease;
+  transition: -webkit-transform 0.1s ease;
+  -o-transition: transform 0.1s ease;
+  transition: transform 0.1s ease;
+  transition: transform 0.1s ease, -webkit-transform 0.1s ease;
 }
 
 .white-button {
@@ -1790,6 +1796,7 @@ p {
     z-index: -1;
     top: 10%;
     right: 0;
+    display: none;
   }
 
   .section-contact {

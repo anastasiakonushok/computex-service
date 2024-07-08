@@ -95,6 +95,20 @@ $(function () {
     });
 
 
+    $(document).ready(function() {
+        $('.hero-service').on('mousemove', function(e) {
+            var $this = $(this);
+            var offsetX = (e.pageX - $this.offset().left) / $this.width() * 100;
+            var offsetY = (e.pageY - $this.offset().top) / $this.height() * 100;
+
+            $this.find('.hero-service__img').css('transform', 'translate(' + (offsetX - 50) / 10 + '%, ' + (offsetY - 50) / 10 + '%)');
+        });
+
+        $('.hero-service').on('mouseleave', function() {
+            $(this).find('.hero-service__img').css('transform', 'translate(0, 0)');
+        });
+    });
+
     $(document).ready(function () {
         var lastScrollTopr = 0;
         $(window).scroll(function (event) {
