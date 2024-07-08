@@ -43,7 +43,25 @@
         }
     }
 }
-
+.section-service-plus {
+    background: var(--white-color);
+    padding: 90px 0px;
+    &__container {
+        gap: 60px;
+    }
+    &__block {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        p {
+            text-align: center;
+            margin-top: 15px;
+            font-weight: 600;
+        }
+    }
+}
 @include mq(tablet-wide, max) {
     .section-plus {
         &__container {
@@ -61,6 +79,16 @@
         }
         &__bg {
             font-size: 15em;
+        }
+    }
+    .section-service-plus {
+        &__container {
+            flex-direction: column;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+        &__block {
+            flex: 1 1 calc(50% - 16px);
         }
     }
 }
