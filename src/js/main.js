@@ -1,5 +1,8 @@
 import $ from "jquery";
 $(function () {
+    // Fancybox initialization
+    Fancybox.bind("[data-fancybox]", {});
+
     //Бургер меню
 
     $(document).ready(function () {
@@ -95,8 +98,8 @@ $(function () {
     });
 
 
-    $(document).ready(function() {
-        $('.hero-service').on('mousemove', function(e) {
+    $(document).ready(function () {
+        $('.hero-service').on('mousemove', function (e) {
             var $this = $(this);
             var offsetX = (e.pageX - $this.offset().left) / $this.width() * 100;
             var offsetY = (e.pageY - $this.offset().top) / $this.height() * 100;
@@ -104,7 +107,7 @@ $(function () {
             $this.find('.hero-service__img').css('transform', 'translate(' + (offsetX - 50) / 10 + '%, ' + (offsetY - 50) / 10 + '%)');
         });
 
-        $('.hero-service').on('mouseleave', function() {
+        $('.hero-service').on('mouseleave', function () {
             $(this).find('.hero-service__img').css('transform', 'translate(0, 0)');
         });
     });
@@ -125,145 +128,39 @@ $(function () {
             lastScrollTopr = str;
         });
     });
-});
 
-const swiper = new Swiper(".swiper-main", {
-    // Optional parameters
-    loop: true,
-    // autoplay:true,
-    // If we need pagination
-    autoplay: {
-        delay: 5000,
-    },
-    pagination: {
-        el: ".swiper-main__pagination",
-        type: "fraction",
-    },
-    navigation: {
-        nextEl: ".swiper-main__next",
-        prevEl: ".swiper-main__prev",
-    },
-});
-const swiperNews = new Swiper(".swiper-news", {
-    // Optional parameters
-    // loop: true,
-    spaceBetween: 16,
-    navigation: {
-        nextEl: ".swiper-news-next",
-        prevEl: ".swiper-news-prev",
-    },
-    pagination: {
-        el: ".swiper-news-pagination",
-        clickable: true,
-    },
-    // autoplay: {
-    //     delay: 3000,
-    // },
-    breakpoints: {
-        // when window width is >= 320px
-        350: {
-            slidesPerView: 1,
-        },
-        650: {
-            slidesPerView: 3,
-        },
-        1170: {
-            slidesPerView: 3,
-        },
-    },
-});
-//
-const swiperAuto = new Swiper(".swiper-auto", {
-    // Optional parameters
-    // loop: true,
-    spaceBetween: 30,
-    navigation: {
-        nextEl: ".swiper-auto-next",
-        prevEl: ".swiper-auto-prev",
-    },
-    // autoplay: {
-    //     delay: 3000,
-    // },
-    breakpoints: {
-        // when window width is >= 320px
-        350: {
-            slidesPerView: 1,
-        },
-        650: {
-            slidesPerView: 3,
-        },
-        1170: {
-            slidesPerView: 3,
-        },
-    },
-});
-//
-const swiperTariff = new Swiper(".swiper-tariff", {
-    // Optional parameters
-    spaceBetween: 30,
-    navigation: {
-        nextEl: ".swiper-tariff-next",
-        prevEl: ".swiper-tariff-prev",
-    },
-    // autoplay: {
-    //   delay: 3000,
-    // },
-    breakpoints: {
-        // when window width is >= 320px
-        350: {
-            slidesPerView: 1,
-        },
-        650: {
-            slidesPerView: 2,
-        },
-        900: {
-            slidesPerView: 3,
-        },
-        1170: {
-            slidesPerView: 4,
-        },
-    },
-});
-const swiperCertificates = new Swiper(".swiper-certificates", {
-    // Optional parameters
-    spaceBetween: 30,
-    navigation: {
-        nextEl: ".swiper-certificates-next",
-        prevEl: ".swiper-certificates-prev",
-    },
-    // autoplay: {
-    //   delay: 3000,
-    // },
-    breakpoints: {
-        // when window width is >= 320px
-        350: {
-            slidesPerView: 1,
-        },
-        650: {
-            slidesPerView: 3,
-        },
-        1170: {
-            slidesPerView: 4,
-        },
-    },
-});
-const swiperChanel = new Swiper(".swiper-popular-chanel", {
-    speed: 2000,
-    loop: true,
-    autoplay: {
-        delay: 1,
-        disableOnInteraction: false, // или сделать так, чтобы восстанавливался autoplay после взаимодействия
-    },
-    breakpoints: {
-        // when window width is >= 320px
-        350: {
-            slidesPerView: 3,
-        },
-        650: {
-            slidesPerView: 4,
-        },
-        1170: {
-            slidesPerView: 6,
-        },
-    },
+    // counter
+    $('.counter').each(function () {
+        var startNumber = 0;
+        var $item = $(this);
+        var stop;
+
+        function counterUp() {
+            var increment = ($item.data('number') > 100) ? 2 : 1; // Увеличиваем на 2, если число больше 100, иначе на 1
+            startNumber += increment;
+            $item.text(startNumber);
+
+            if (startNumber >= $item.data('number')) { // Изменяем условие завершения на >= для правильной остановки счетчика
+                clearInterval(stop);
+            }
+        }
+
+        var intervalTime = ($item.data('number') > 100) ? 10 : 50; // Выбираем интервал в зависимости от значения числа
+        stop = setInterval(function () {
+            counterUp();
+        }, intervalTime); // Используем переменную intervalTime в качестве интервала
+    });
+    //
+
+    // Tab navigation
+    $('.tab-links a').on('click', function (e) {
+        e.preventDefault();
+
+        var currentAttrValue = $(this).attr('href');
+
+        $('.tab' + currentAttrValue).addClass('active').siblings().removeClass('active');
+
+        $(this).parent('li').addClass('active').siblings().removeClass('active');
+    });
+
 });
