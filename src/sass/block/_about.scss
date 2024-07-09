@@ -30,6 +30,29 @@
 .section-about {
     padding: 90px 0px;
     background:var(--main-white);
+    &__container {
+        gap: 60px;
+    }
+    &__number {
+       display: grid;
+       grid-template-columns: repeat(2,1fr);
+        gap: 30px;
+        span {
+            line-height: 100%;
+            font-weight: 800;
+            color:var(--main-orange);
+            font-size: var(--font-128);
+        }
+    }
+    &__counter {
+        p {
+            margin-top: 15px;
+            font-weight: 500;
+        }
+    }
+    &__block {
+        flex: 1;
+    }
 }
 
 @include mq(tablet-wide, min) {
@@ -46,6 +69,11 @@
 }
 
 @include mq(tablet-wide, max) { 
+    .section-about {
+        &__container {
+            flex-direction: column;
+        }
+    }
     .section-sertificat {
         &__grid {
             grid-template-columns: repeat(2,1fr);
