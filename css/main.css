@@ -159,11 +159,61 @@ table {
   --title-font: "Montserrat", sans-serif;
   --h1-special: 2.8em;
   --h1-font: 2em;
-  --h2-font: 1.5em;
+  --h2-font: 1.7em;
   --h3-font: 1.25em;
   --regular-font: 1em;
   --second-font: 1.5em;
   --font-128: 5em;
+}
+
+.section-sertificat {
+  padding-top: 90px;
+}
+
+.section-sertificat h2 {
+  margin-bottom: 60px;
+}
+
+.section-sertificat__grid {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.section-sertificat__block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 15px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: var(--main-white);
+  padding: 30px;
+  border-radius: 15px;
+  -webkit-box-shadow: 0 7px 30px -10px rgba(150, 170, 180, 0.5);
+  box-shadow: 0 7px 30px -10px rgba(150, 170, 180, 0.5);
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.section-sertificat__block img {
+  max-height: 230px;
+}
+
+.section-sertificat__block p {
+  color: var(--main-orange);
+  font-weight: 700;
+}
+
+.section-about {
+  padding: 90px 0px;
+  background: var(--main-white);
 }
 
 .section-advantages {
@@ -548,8 +598,9 @@ p {
   position: absolute;
   z-index: -1;
   font-size: var(--h1-special);
-  color: rgba(223, 222, 222, 0.2431372549);
+  color: rgba(223, 222, 222, 0.5254901961);
   text-transform: uppercase;
+  font-weight: 800;
   top: 0;
   left: 15px;
 }
@@ -1514,6 +1565,17 @@ p {
 }
 
 @media only screen and (min-width: 1024px) {
+  .section-sertificat__block:hover {
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    background: var(--main-orange);
+  }
+
+  .section-sertificat__block:hover p {
+    color: #fff;
+  }
+
   .section-advantages {
     background-attachment: fixed;
   }
@@ -1736,6 +1798,10 @@ p {
     --h3-font: 1.1em;
     --font-128: 3em;
     --second-font: 1em;
+  }
+
+  .section-sertificat__grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .section-advantages__container {
@@ -2089,12 +2155,16 @@ p {
 
 @media only screen and (max-width: 559px) {
   :root {
-    --h1-special: 1.8em;
+    --h1-special: 2em;
     --h1-font: 1.8em;
     --h2-font: 1.1em;
     --h3-font: 1em;
     --font-128: 2em;
     --second-font: 1em;
+  }
+
+  .section-sertificat__grid {
+    grid-template-columns: repeat(1, 1fr);
   }
 
 @supports (-webkit-appearance:none) {
