@@ -216,6 +216,34 @@ table {
   background: var(--main-white);
 }
 
+.section-about__container {
+  gap: 60px;
+}
+
+.section-about__number {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.section-about__number span {
+  line-height: 100%;
+  font-weight: 800;
+  color: var(--main-orange);
+  font-size: var(--font-128);
+}
+
+.section-about__counter p {
+  margin-top: 15px;
+  font-weight: 500;
+}
+
+.section-about__block {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
 .section-advantages {
   padding: 90px 0px;
   background-repeat: no-repeat;
@@ -1798,6 +1826,13 @@ p {
     --h3-font: 1.1em;
     --font-128: 3em;
     --second-font: 1em;
+  }
+
+  .section-about__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
   }
 
   .section-sertificat__grid {
