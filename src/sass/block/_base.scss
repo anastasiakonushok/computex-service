@@ -60,6 +60,34 @@ h3 {
 p {
     @include regular;
 }
+.type-page {
+    padding: 90px 0px;
+    h1 {
+        color:var(--main-orange);
+        margin-bottom: 60px;
+        text-align: center;
+    }
+}
+.inner-content {
+    color:var(--dark-color);
+    h2 {
+        margin-bottom: 30px;
+    }
+    p {
+        margin-bottom: 15px;
+    }
+    ul {
+        padding-left: 15px;
+        list-style: disc;
+        li {
+            margin-bottom: 15px;
+            @include regular;
+        }
+    }
+    b {
+        font-weight: 700;
+    }
+}
 
 .button-primary {
     @include button-orange(15px 30px);

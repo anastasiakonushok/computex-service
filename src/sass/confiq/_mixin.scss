@@ -118,19 +118,19 @@ $breakpoints: ("phone": 400px,
 
 // Определение миксина для кнопки
 // Определение миксина для кнопки с использованием CSS-переменных
-@mixin button-orange($padding, $border-radius: 5px, $font-size: 16px) {
+@mixin button-orange($padding, $border-radius: 15px, $font-size: 16px) {
     background-color: var(--main-orange);
     color: var(--main-white);
     padding: $padding;
     border: none;
     border-radius: $border-radius;
-    font-size: $font-size;
+    font-size: $font-size;  
     font-weight: 500;
     cursor: pointer;
     transition: background-color 0.3s ease;
   
     &:hover {
-      background-color: #DAAB3A;
+      background-color: #d04103;
     }
   
     // &:focus {

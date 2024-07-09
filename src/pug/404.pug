@@ -1,0 +1,11 @@
+extends layout/app
+
+block page 
+    include chunk/header
+    section.section-404 
+        .container.flex.section-404__container
+            .section-404__card
+                h1 404
+                p Страница не найдена
+                a(href="./").button-primary Главная страница 
+    include chunk/footer
