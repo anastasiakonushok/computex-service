@@ -524,11 +524,6 @@ p {
   border-radius: 8px;
 }
 
-.tab-links li a.active {
-  background: #009879;
-  color: #fff;
-}
-
 .tab-links .active a {
   background: var(--main-orange);
   color: var(--main-white);
@@ -1277,6 +1272,10 @@ p {
 .ymaps-2-1-79-ground-pane {
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
+}
+
+.services-tab {
+  padding-top: 90px;
 }
 
 .reference {
