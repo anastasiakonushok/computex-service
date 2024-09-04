@@ -19,7 +19,7 @@
     }
     &__column {
         flex-direction: column;
-        gap: 30px;
+        gap: 60px 30px;
         display: grid;
         grid-template-columns: repeat(2,1fr);
     }

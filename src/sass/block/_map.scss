@@ -1,6 +1,7 @@
 .map-section {
     // height: 350px;
     position: relative;
+    overflow: hidden;
     &__wrapp {
       padding: 60px 0px;
       background:var(--main-orange);

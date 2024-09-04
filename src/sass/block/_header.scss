@@ -44,7 +44,7 @@
     }
     .header-bottom {
         .sub-menu {
-            .nav__link {
+            a {
                 color:var(--dark-color);
             }
         }
@@ -62,12 +62,12 @@
                 align-items: center;
             }
     
-            &__item {
+            li {
                 position: relative;
                 // padding-right: 16px;
             }
     
-            &__link {
+            a {
                 @include regular;
                 color: var(--dark-color);
                 font-weight: 500;
@@ -94,12 +94,12 @@
                 gap: 0px;
             }
 
-            &__item {
+            li {
                 width: 100%;
                 padding-bottom: 30px;
             }
 
-            &__link {
+            a {
                 font-size: 24px;
             }
         }
@@ -274,10 +274,10 @@
 
     .header-bottom {
         .nav {
-            &__link {
+            a {
                 padding-bottom: 30px;
             }
-            &__link:hover {
+            a:hover {
                 color: var(--main-orange)!important;
             }
         }

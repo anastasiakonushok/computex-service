@@ -110,26 +110,38 @@
             }
         }
     }
-    
-   
-    // @keyframes fillBackground {
-    //     from {
-    //         background: linear-gradient(to right, var(--main-orange) 0%, var(--main-orange) 0%, transparent 0%);
-    //     }
-    //     to {
-    //         background: linear-gradient(to right, var(--main-orange) 0%, var(--main-orange) 100%, transparent 100%);
-    //     }
-    // }
 }
 @include mq(tablet-wide, max) {
     .hero {
+        padding-top: 15em;
+        align-items:flex-start;
+        padding-top: 15em;
         height: calc(100vh - 62px);
         background-position: 80% 50%;
         &__bg {
             display: none;
         }
         &__img {
-            display: none;
+            // display: none;
+            width: 50%;
+            right: 10%;
+            bottom:-350px;
+        }
+    }
+    .circle {
+        top:70%;
+        // bottom: 10%;
+        left: 15%;
+    }
+}
+@include mq(tablet, max) {
+    .hero {
+        padding-top: 8em;
+        overflow: hidden;
+        &__img {
+            // display: none;
+            width: 55%;
+            bottom:-250px;
         }
         &__container {
             p {
@@ -143,7 +155,7 @@
     .circle {
         top:70%;
         // bottom: 10%;
-        left: 50%;
+        left: 15%;
     }
 }
 .circle {

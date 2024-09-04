@@ -37,7 +37,7 @@
         --second-font: 1em;
     }
     @include mq(phablet, max) {
-        --h1-special: 2em;
+        --h1-special: 1.8em;
         --h1-font: 1.8em;
         --h2-font: 1.1em;
         --h3-font: 1em;
