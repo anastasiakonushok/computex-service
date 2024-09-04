@@ -730,7 +730,7 @@ p {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  gap: 30px;
+  gap: 60px 30px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
@@ -863,7 +863,7 @@ p {
   float: right;
   color: var(--main-orange);
   cursor: pointer;
-  padding: 16px 20px;
+  padding: 10px 15px;
   background: #fff;
   -webkit-box-shadow: 0 6px 10px 0 rgba(68, 68, 68, 0.212);
   box-shadow: 0 6px 10px 0 rgba(68, 68, 68, 0.212);
@@ -931,7 +931,7 @@ p {
   font-weight: 500;
 }
 
-.header .header-bottom .sub-menu .nav__link {
+.header .header-bottom .sub-menu a {
   color: var(--dark-color);
 }
 
@@ -956,11 +956,11 @@ p {
   align-items: center;
 }
 
-.header .header-bottom .nav__item {
+.header .header-bottom .nav li {
   position: relative;
 }
 
-.header .header-bottom .nav__link {
+.header .header-bottom .nav a {
   font-size: var(--regular-font);
   line-height: 140%;
   font-weight: 400;
@@ -1274,6 +1274,7 @@ p {
 
 .map-section {
   position: relative;
+  overflow: hidden;
 }
 
 .map-section__wrapp {
@@ -1755,11 +1756,11 @@ p {
     margin-bottom: 16px;
   }
 
-  .header-bottom .nav__link {
+  .header-bottom .nav a {
     padding-bottom: 30px;
   }
 
-  .header-bottom .nav__link:hover {
+  .header-bottom .nav a:hover {
     color: var(--main-orange) !important;
   }
 
@@ -2004,12 +2005,12 @@ p {
     gap: 0px;
   }
 
-  .header-bottom .nav__item {
+  .header-bottom .nav li {
     width: 100%;
     padding-bottom: 30px;
   }
 
-  .header-bottom .nav__link {
+  .header-bottom .nav a {
     font-size: 24px;
   }
 
@@ -2128,6 +2129,11 @@ p {
   }
 
   .hero {
+    padding-top: 15em;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    padding-top: 15em;
     height: calc(100vh - 62px);
     background-position: 80% 50%;
   }
@@ -2137,20 +2143,14 @@ p {
   }
 
   .hero__img {
-    display: none;
-  }
-
-  .hero__container p {
-    width: 100%;
-  }
-
-  .hero__content {
-    width: 100%;
+    width: 50%;
+    right: 10%;
+    bottom: -350px;
   }
 
   .circle {
     top: 70%;
-    left: 50%;
+    left: 15%;
   }
 
   .law-section__container {
@@ -2255,6 +2255,29 @@ p {
     width: 100%;
   }
 
+  .hero {
+    padding-top: 8em;
+    overflow: hidden;
+  }
+
+  .hero__img {
+    width: 55%;
+    bottom: -250px;
+  }
+
+  .hero__container p {
+    width: 100%;
+  }
+
+  .hero__content {
+    width: 100%;
+  }
+
+  .circle {
+    top: 70%;
+    left: 15%;
+  }
+
 @supports (-webkit-appearance:none) {
 
 }
@@ -2262,7 +2285,7 @@ p {
 
 @media only screen and (max-width: 559px) {
   :root {
-    --h1-special: 2em;
+    --h1-special: 1.8em;
     --h1-font: 1.8em;
     --h2-font: 1.1em;
     --h3-font: 1em;
