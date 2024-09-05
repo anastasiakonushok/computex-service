@@ -1724,7 +1724,7 @@ p {
     box-shadow: 0 8px 20px 0 rgba(2, 24, 44, 0.194);
   }
 
-  .nav__item:hover > .sub-menu {
+  .menu-item-has-children:hover > .sub-menu {
     display: block;
   }
 
