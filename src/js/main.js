@@ -5,14 +5,18 @@ $(function () {
 
     //Бургер меню
 
-    $(document).ready(function () {
-        $(".burger-menu").click(function () {
-            $(".burger-menu").toggleClass("burger-menu-active");
-            $(".header-bottom").toggleClass("show");
-            $("body").toggleClass("body-lock");
-        });
-    });
-    AOS.init();
+    // $(document).ready(function () {
+    //     $(".burger-menu").click(function () {
+    //         $(".burger-menu").toggleClass("burger-menu-active");
+    //         $(".header-bottom").toggleClass("show");
+    //         $("body").toggleClass("body-lock");
+    //     });
+    // });
+    AOS.init(
+        {
+            disable: 'mobile',
+        }
+    );
     ymaps.ready(init);
     function init() {
         // Создание карты.
@@ -21,7 +25,7 @@ $(function () {
             // Порядок по умолчанию: «широта, долгота».
             // Чтобы не определять координаты центра карты вручную,
             // воспользуйтесь инструментом Определение координат.
-            center: [52.432777404785156, 31.00490379333496],
+            center: [52.432787, 31.004957],
             // Уровень масштабирования. Допустимые значения:
             // от 0 (весь мир) до 19.
             zoom: 17,
@@ -36,7 +40,7 @@ $(function () {
         var myPlacemark = new ymaps.GeoObject({
             geometry: {
                 type: "Point",
-                coordinates: [52.432777404785156, 31.00490379333496]
+                coordinates: [52.432787, 31.004957]
             }
         },
             {
@@ -162,5 +166,30 @@ $(function () {
 
         $(this).parent('li').addClass('active').siblings().removeClass('active');
     });
+    (function ($) { // Begin jQuery
+        $(function () { // DOM ready
+            // If a link has a dropdown, add sub menu toggle.
+            $('.menu-item-has-children a').click(function (e) {
+                $(this).siblings('.sub-menu').toggle();
+                // Close one dropdown when selecting another
+                this.classList.toggle('active-menu');
+                $('.sub-menu').not($(this).siblings()).hide();
+                $('.menu-item-has-children a').not(this).removeClass('active-menu');
+                e.stopPropagation();
+            });
+            // Clicking away from dropdown will remove the dropdown class
+            $('html').click(function () {
+                $('.sub-menu').hide();
+                $('.menu-item-has-children a').removeClass('active-menu');
+            });
 
+            // Hamburger to X toggle
+            $('#nav-toggle').click(function () {
+                // Add or remove 'show' class to 'nav' element when burger menu is clicked
+                $('.header-bottom').toggleClass('show');
+                $(this).toggleClass('burger-menu-active');
+                $("body").toggleClass("body-lock");
+            });
+        }); // end DOM ready
+    })(jQuery); // end jQuery
 });
