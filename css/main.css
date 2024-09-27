@@ -700,10 +700,12 @@ p {
   cursor: pointer;
 }
 
+.section-contact {
+  overflow: hidden;
+  background: var(--main-orange);
+}
+
 .section-contact__block {
-  -webkit-box-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
   overflow: hidden;
 }
 
@@ -712,8 +714,21 @@ p {
   height: 100%;
 }
 
+.section-contact__map {
+  width: 40%;
+}
+
+.section-contact__map #map {
+  max-height: 600px;
+}
+
+.section-contact__container {
+  padding: 0;
+}
+
 .section-contact__info {
-  padding: 30px 0px;
+  width: 60%;
+  padding: 30px 20px;
   background: var(--main-orange);
 }
 
@@ -775,6 +790,11 @@ p {
 
 .section-contact__social {
   color: var(--main-yellow);
+  display: inline-block;
+}
+
+.section-contact__social:not(:first-child) {
+  padding: 0px 5px;
 }
 
 .footer {
@@ -1361,6 +1381,8 @@ p {
 .map-section__social {
   color: var(--main-white);
   opacity: 0.9;
+  display: inline-block;
+  padding: 0 5px;
 }
 
 .map-section__phons {
@@ -1379,6 +1401,32 @@ p {
 .ymaps-2-1-79-ground-pane {
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
+}
+
+.section-partners {
+  padding-top: 90px;
+}
+
+.section-partners__grid {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(6, 1fr);
+}
+
+.section-partners__block {
+  background: var(--main-white);
+  border-radius: 15px;
+  -webkit-box-shadow: 0 7px 30px -10px rgba(150, 170, 180, 0.5);
+  box-shadow: 0 7px 30px -10px rgba(150, 170, 180, 0.5);
+  padding: 30px;
+}
+
+.section-partners__block img {
+  display: block;
+  -o-object-fit: contain;
+  object-fit: contain;
+  height: 50px;
+  width: 100%;
 }
 
 .services-tab {
@@ -1434,6 +1482,9 @@ p {
   line-height: 110%;
   font-weight: 700;
   color: var(--dark-color);
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .accordion:not(:last-child) {
@@ -1697,6 +1748,19 @@ p {
     color: var(--main-orange);
   }
 
+  .accordion__title:hover {
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+
+  .accordion__title:hover h3 {
+    color: var(--main-orange);
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+
 @supports (-webkit-appearance:none) {
 
 }
@@ -1771,15 +1835,6 @@ p {
     -webkit-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
-  }
-
-  .header_up {
-    -webkit-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    transition: all 0.3s ease;
-    position: fixed;
-    -webkit-box-shadow: 0 8px 20px 0 rgba(2, 24, 44, 0.194);
-    box-shadow: 0 8px 20px 0 rgba(2, 24, 44, 0.194);
   }
 
   .sub-menu {
@@ -1927,6 +1982,37 @@ p {
     --h1-special: 2.5em;
   }
 
+  .section-contact {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .section-contact__column {
+    grid-template-columns: 1fr;
+  }
+
+  .section-contact__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .section-contact__info {
+    width: 100%;
+  }
+
+  .section-contact__map {
+    width: 100%;
+    height: 100%;
+  }
+
+  .section-contact__map #map {
+    height: 100%;
+  }
+
 @supports (-webkit-appearance:none) {
 
 }
@@ -2012,17 +2098,6 @@ p {
     top: 10%;
     right: 0;
     display: none;
-  }
-
-  .section-contact {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-  }
-
-  .section-contact__column {
-    grid-template-columns: 1fr;
   }
 
   .footer__wrapp {
@@ -2200,6 +2275,10 @@ p {
     gap: 30px;
   }
 
+  .section-partners__grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
   .section-plus__container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -2269,6 +2348,15 @@ p {
 }
 
 @media only screen and (max-width: 767px) {
+  .section-contact__map {
+    width: 100%;
+    height: 100%;
+  }
+
+  .section-contact__map #map {
+    height: 100%;
+  }
+
   .footer__wrapp {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
@@ -2303,6 +2391,10 @@ p {
     left: 15%;
   }
 
+  .section-partners__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
   .section-plus__block--2 {
     min-height: 350px;
   }
@@ -2324,6 +2416,10 @@ p {
 
   .section-sertificat__grid {
     grid-template-columns: repeat(1, 1fr);
+  }
+
+  .section-partners__grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 
 @supports (-webkit-appearance:none) {
