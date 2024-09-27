@@ -46,6 +46,7 @@
     h3 {
         @include h3;
         color: var(--dark-color);
+        transition: all 0.3s ease;
     }
 }
 
@@ -68,3 +69,15 @@
 }
 
 
+@include mq(tablet, min) {
+    .accordion {
+        &__title {
+            @include hover {
+                h3 {
+                    color:var(--main-orange);
+                    transition: all 0.3s ease;
+                }
+            }
+        }
+    }
+}

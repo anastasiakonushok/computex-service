@@ -116,22 +116,22 @@ $(function () {
         });
     });
 
-    $(document).ready(function () {
-        var lastScrollTopr = 0;
-        $(window).scroll(function (event) {
-            var str = $(this).scrollTop();
-            if (str > lastScrollTopr) {
-                $(".button-up").addClass("scroll-top_down");
-                $(".button-up").removeClass("scroll-top_up");
-            } else if (str <= 800) {
-                $(".button-up").removeClass("scroll-top_up");
-            } else {
-                $(".button-up").addClass("scroll-top_up");
-                $(".button-up").removeClass("scroll-top_down");
-            }
-            lastScrollTopr = str;
-        });
-    });
+    // $(document).ready(function () {
+    //     var lastScrollTopr = 0;
+    //     $(window).scroll(function (event) {
+    //         var str = $(this).scrollTop();
+    //         if (str > lastScrollTopr) {
+    //             $(".button-up").addClass("scroll-top_down");
+    //             $(".button-up").removeClass("scroll-top_up");
+    //         } else if (str <= 800) {
+    //             $(".button-up").removeClass("scroll-top_up");
+    //         } else {
+    //             $(".button-up").addClass("scroll-top_up");
+    //             $(".button-up").removeClass("scroll-top_down");
+    //         }
+    //         lastScrollTopr = str;
+    //     });
+    // });
 
     // counter
     $('.counter').each(function () {

@@ -36,6 +36,8 @@
     &__social {
       color:var(--main-white);
       opacity: 0.9;
+      display: inline-block;
+      padding: 0 5px;
     }
     &__phons {
       flex-direction: column;
