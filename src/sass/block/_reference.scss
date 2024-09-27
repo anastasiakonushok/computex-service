@@ -18,6 +18,9 @@
     &__title {
         cursor: pointer;
         position: relative;
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
     }
     .show-accordion::after {
         content: "";
@@ -32,7 +35,7 @@
         content: "";
         transition: all 0.5s ease-in-out;
         display: block;
-        position: absolute;
+        // position: absolute;
         right: 0px;
         top: 40%;
         width: 20px;
