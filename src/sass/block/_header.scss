@@ -215,6 +215,24 @@
 
 @include mq(tablet-wide, min) {
     .header {
+        .header-top {
+            &__info {
+                a {
+                    @include hover {
+                        color:var(--main-orange);
+                    }
+                }
+            }
+            &__info {
+                @include hover {
+                    color:var(--main-orange);
+                    .text {
+                        color:var(--main-orange);   
+                    }
+                }
+            }
+            
+        }
         .header-bottom {
             .nav {
             
@@ -232,13 +250,7 @@
         }
     }
    
-    .header-top {
-        a {
-            @include hover {
-                color:var(--main-orange);
-            }
-        }
-    }
+    
     .header_down {
         top: -200px;
         transition: all 0.3s ease;

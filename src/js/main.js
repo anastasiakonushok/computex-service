@@ -156,15 +156,30 @@ $(function () {
     });
     //
 
-    // Tab navigation
+   
+    // Tab navigation with URL change but no jump to anchor
     $('.tab-links a').on('click', function (e) {
         e.preventDefault();
 
         var currentAttrValue = $(this).attr('href');
 
+        // Активируем нужный таб и скрываем остальные
         $('.tab' + currentAttrValue).addClass('active').siblings().removeClass('active');
 
+        // Активируем текущую ссылку и деактивируем другие
         $(this).parent('li').addClass('active').siblings().removeClass('active');
+
+        // Меняем URL, но не перескакиваем к якорю
+        history.pushState(null, null, currentAttrValue);
+    });
+
+    // Если URL содержит якорь, активируем соответствующий таб при загрузке страницы
+    $(document).ready(function () {
+        var hash = window.location.hash;
+
+        if (hash) {
+            $('.tab-links a[href="' + hash + '"]').click();
+        }
     });
     (function ($) { // Begin jQuery
         $(function () { // DOM ready
