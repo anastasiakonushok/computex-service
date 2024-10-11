@@ -1629,11 +1629,11 @@ p {
   object-fit: contain;
   margin: 0 auto;
   width: 100%;
+  min-height: 200px;
   height: 100%;
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
-  min-height: 150px;
 }
 
 .service-links__link h3 {
