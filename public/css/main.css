@@ -160,7 +160,7 @@ table {
   --h1-special: 2.8em;
   --h1-font: 2em;
   --h2-font: 1.7em;
-  --h3-font: 1.25em;
+  --h3-font: 1.2em;
   --regular-font: 1em;
   --second-font: 1.5em;
   --font-128: 5em;
@@ -1785,7 +1785,7 @@ p {
 }
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1070px) {
   .section-sertificat__block:hover {
     -webkit-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
@@ -2018,7 +2018,7 @@ p {
 }
 }
 
-@media only screen and (max-width: 1247px) {
+@media only screen and (max-width: 1299px) {
   :root {
     --h1-special: 2.5em;
   }
@@ -2054,17 +2054,21 @@ p {
     height: 100%;
   }
 
+  .service-links__link {
+    padding: 20px;
+  }
+
 @supports (-webkit-appearance:none) {
 
 }
 }
 
-@media only screen and (max-width: 1023px) {
+@media only screen and (max-width: 1069px) {
   :root {
     --h1-special: 2em;
     --h1-font: 2em;
     --h2-font: 1.3em;
-    --h3-font: 1.1em;
+    --h3-font: 1em;
     --font-128: 3em;
     --second-font: 1em;
   }
@@ -2366,6 +2370,10 @@ p {
     flex: 1 1 calc(50% - 16px);
   }
 
+  .service-links__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .service-links__link {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
@@ -2378,11 +2386,6 @@ p {
 
   .service-links__link img {
     height: 200px;
-  }
-
-  .service-links__container {
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(6, 1fr);
   }
 
   .service-links__arrow svg {
@@ -2459,6 +2462,10 @@ p {
     min-height: 350px;
   }
 
+  .service-links__container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
 @supports (-webkit-appearance:none) {
 
 }
@@ -2469,7 +2476,6 @@ p {
     --h1-special: 1.8em;
     --h1-font: 1.8em;
     --h2-font: 1.1em;
-    --h3-font: 1em;
     --font-128: 2em;
     --second-font: 1em;
   }

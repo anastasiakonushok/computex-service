@@ -83,10 +83,20 @@
         }
     }
 }
-
-@include mq(tablet-wide, max) {
+@include mq(desktop, max) {
     .service-links {
         &__link {
+            padding: 20px;
+        }
+    }
+}
+@include mq(tablet-wide, max) {
+    .service-links {
+        &__container {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        &__link {
+            
             justify-content: space-between;
             h3 {
                 margin-bottom: 15px;
@@ -95,16 +105,19 @@
                 height: 200px;
             }
         }
-        &__container {
-            grid-template-columns: repeat(1,1fr);
-            grid-template-rows: repeat(6,1fr);
-        }
-        
+                
         &__arrow {
             svg {
                 width: 40px;
                 height: 40px;
             }
+        }
+    }
+}
+@include mq(tablet,max) {
+    .service-links {
+        &__container {
+            grid-template-columns: repeat(1,1fr);
         }
     }
 }
