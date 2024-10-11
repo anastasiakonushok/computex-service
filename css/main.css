@@ -1633,6 +1633,7 @@ p {
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  min-height: 150px;
 }
 
 .service-links__link h3 {
@@ -2366,17 +2367,23 @@ p {
     flex: 1 1 calc(50% - 16px);
   }
 
+  .service-links__link {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+
   .service-links__link h3 {
     margin-bottom: 15px;
+  }
+
+  .service-links__link img {
+    height: 200px;
   }
 
   .service-links__container {
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(6, 1fr);
-  }
-
-  .service-links__img {
-    max-height: 150px;
   }
 
   .service-links__arrow svg {
