@@ -1616,6 +1616,11 @@ p {
   border-radius: 1rem;
   -webkit-box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 20px;
+  align-items: center;
 }
 
 .service-links__link img {
@@ -1623,8 +1628,8 @@ p {
   -o-object-fit: contain;
   object-fit: contain;
   margin: 0 auto;
-  width: 90%;
-  height: 180px;
+  width: 100%;
+  height: 100%;
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
@@ -1637,13 +1642,20 @@ p {
 }
 
 .service-links__arrow {
-  position: absolute;
-  right: 15px;
-  bottom: 15px;
-  display: block;
-  -webkit-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 10px;
+  color: var(--dark-color);
+  font-weight: 600;
+}
+
+.service-links__arrow svg {
+  width: 50px;
+  height: 50px;
 }
 
 .service-price {
@@ -1943,6 +1955,10 @@ p {
     -webkit-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
+  }
+
+  .service-links__link:hover .service-links__arrow {
+    color: #fff;
   }
 
   .service-links__link:hover .service-links__arrow rect {
@@ -2350,9 +2366,22 @@ p {
     flex: 1 1 calc(50% - 16px);
   }
 
+  .service-links__link h3 {
+    margin-bottom: 15px;
+  }
+
   .service-links__container {
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(6, 1fr);
+  }
+
+  .service-links__img {
+    max-height: 150px;
+  }
+
+  .service-links__arrow svg {
+    width: 40px;
+    height: 40px;
   }
 
   .service-info__row {
