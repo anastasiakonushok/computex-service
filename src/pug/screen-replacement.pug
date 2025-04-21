@@ -16,35 +16,32 @@ block page
         include chunk/service-plus
         section.service-info 
             .container.service-info__container
-                h2.title-words(title="Замена") Замена матрицы и по
+                img(src="img/ring-orange.svg" alt="").service-info__ring.circle
+                .service-info__title 
+                    p Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde quo magni dignissimos, consequatur enim placeat beatae id. Fugit facilis, amet, dolor inventore necessitatibus, ad nihil porro ut hic adipisci iusto.
+                    p Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde quo magni dignissimos, consequatur enim placeat beatae id. Fugit facilis, amet, dolor inventore necessitatibus, ad nihil porro ut hic adipisci iusto.
                 .service-info__block
                     .service-info__row.flex
                         p Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde quo magni dignissimos, consequatur enim placeat beatae id. Fugit facilis, amet, dolor inventore necessitatibus, ad nihil porro ut hic adipisci iusto.
                         p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum tempore repellendus odit vel debitis enim possimus sapiente tenetur culpa labore. Totam numquam eos eum soluta architecto itaque eligendi. Magnam, consequuntur.
-                    .service-info__row
-                        p Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta maiores consequatur ipsa, officia sint illum tenetur dolorum ratione corporis debitis omnis quis iste voluptatibus adipisci autem? Aperiam quam maiores perferendis!Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta maiores consequatur ipsa, officia sint illum tenetur dolorum ratione corporis debitis omnis quis iste voluptatibus adipisci autem? Aperiam quam maiores perferendis!Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta maiores consequatur ipsa, officia sint illum tenetur dolorum ratione corporis debitis omnis quis iste voluptatibus adipisci autem? Aperiam quam maiores perferendis!
-        section.service-price 
-            .container 
-                h2.title-words(title="Цены") Цены на услуги
-                .service-price__table 
-                    table.styled-table
-                        thead 
-                            tr 
-                                td Услуга
-                                td Цена
-                        tbody 
-                            tr 
-                                td Товар 1
-                                td 10 р
-                            tr 
-                                td Мотаж 2
-                                td 20 р
-                            tr 
-                                td Мотаж 2
-                                td 20 р
-                            tr 
-                                td Мотаж 2
-                                td 20 р
+                .service-info__img 
+                    span.span-computex [ computex ]
+                    img(src="img/lap-top.jpg" alt="")
+                    a(href="") связаться с нами
+        section.price-info 
+            .container.price-info__container 
+                .price-info__wrapp.flex
+                    .price-info__img 
+                        svg(width="563" height="89" viewBox="0 0 563 89" fill="none" xmlns="http://www.w3.org/2000/svg")
+                            path(d="M-5.57579 46.5592C29.3367 65.9489 55.8988 72.7533 96.9439 66.1909C134.01 60.2646 172.626 39.5142 205.883 23.7837C247.058 4.30799 329.905 -16.9481 360.273 25.8198C383.852 59.0278 359.908 104.948 312.889 98.827C294.762 96.4671 283.151 76.4005 289.197 60.7994C295.728 43.9489 319.983 33.3116 336.952 27.5825C382.523 12.1961 418.358 47.9082 461.478 49.7943C501.763 51.5565 529.208 32.1247 556.563 7.00755C558.906 4.8561 559.057 17.2959 559.423 20.368C560.764 31.6304 562.67 26.334 561.655 17.8186C561.003 12.342 562.82 0.316316 554.985 4.40444C549.332 7.35388 536.949 9.34377 530.305 10.135" stroke="white" stroke-linecap="round")
+                    .price-info__text
+                        h3 Актуальные цены на комплектующие уточняйте у наших менеджеров. Они помогут с выбором и ответят на все вопросы по стоимости и наличию!
+                        a.hero-service__link.white-button(href="./contact.html")
+                            span.white-button__text Контакты
+                            span.white-button__arrow
+                                svg(width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg")
+                                    path(d="M0.313814 0.313814C0.694195 -0.0665668 1.28943 -0.101147 1.70887 0.210074L1.82904 0.313814L8.25761 6.74239C8.63799 7.12277 8.67257 7.718 8.36135 8.13745L8.25761 8.25761L1.82904 14.6862C1.41062 15.1046 0.732233 15.1046 0.313814 14.6862C-0.0665666 14.3058 -0.101146 13.7106 0.210074 13.2911L0.313814 13.171L5.98477 7.5L0.313814 1.82904C-0.104605 1.41062 -0.104605 0.732233 0.313814 0.313814Z" fill="#FA5B18")
+                    .price-info__images 
+                        img(src="./img/technika.png", alt="")
         include chunk/section-all-link
-        include chunk/map
     include chunk/footer

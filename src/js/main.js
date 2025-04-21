@@ -1,22 +1,5 @@
 import $ from "jquery";
 $(function () {
-    // Fancybox initialization
-    Fancybox.bind("[data-fancybox]", {});
-
-    //Бургер меню
-
-    // $(document).ready(function () {
-    //     $(".burger-menu").click(function () {
-    //         $(".burger-menu").toggleClass("burger-menu-active");
-    //         $(".header-bottom").toggleClass("show");
-    //         $("body").toggleClass("body-lock");
-    //     });
-    // });
-    AOS.init(
-        {
-            disable: 'mobile',
-        }
-    );
     ymaps.ready(init);
     function init() {
         // Создание карты.
@@ -106,33 +89,18 @@ $(function () {
         $('.hero-service').on('mousemove', function (e) {
             var $this = $(this);
             var offsetX = (e.pageX - $this.offset().left) / $this.width() * 100;
-            var offsetY = (e.pageY - $this.offset().top) / $this.height() * 100;
-
-            $this.find('.hero-service__img').css('transform', 'translate(' + (offsetX - 50) / 10 + '%, ' + (offsetY - 50) / 10 + '%)');
+    
+            // Очень маленький сдвиг по оси X
+            $this.find('.hero-service__img').css('transform', 'translate(' + (offsetX - 50) / 5 + '%, -50%)');
         });
-
+    
         $('.hero-service').on('mouseleave', function () {
-            $(this).find('.hero-service__img').css('transform', 'translate(0, 0)');
+            $(this).find('.hero-service__img').css('transform', 'translate(0, -50%)');
         });
     });
+    
 
-    // $(document).ready(function () {
-    //     var lastScrollTopr = 0;
-    //     $(window).scroll(function (event) {
-    //         var str = $(this).scrollTop();
-    //         if (str > lastScrollTopr) {
-    //             $(".button-up").addClass("scroll-top_down");
-    //             $(".button-up").removeClass("scroll-top_up");
-    //         } else if (str <= 800) {
-    //             $(".button-up").removeClass("scroll-top_up");
-    //         } else {
-    //             $(".button-up").addClass("scroll-top_up");
-    //             $(".button-up").removeClass("scroll-top_down");
-    //         }
-    //         lastScrollTopr = str;
-    //     });
-    // });
-
+   
     // counter
     $('.counter').each(function () {
         var startNumber = 0;
@@ -208,3 +176,117 @@ $(function () {
         }); // end DOM ready
     })(jQuery); // end jQuery
 });
+
+
+
+
+gsap.registerPlugin(ScrollTrigger);
+
+// Создаем timeline для последовательной анимации
+const tl = gsap.timeline();
+if (window.innerWidth >= 890) {
+    // Анимация для закрашивания фона
+    tl.from(".hero__bg img", {
+        duration: 0.7,
+        opacity: 0,
+        ease: "expo.inOut"
+    });
+    // Анимация для h1 после появления заголовка
+    gsap.from(".hero h1", {
+        duration: 1,
+        opacity: 0,
+        y: 50,
+        ease: "expo.out",
+    }); // Запуск анимации h1 спустя 1 сек после старта появления букв
+
+    // Анимация появления текста по буквам после закрашивания фона
+    gsap.from(".hero__container p", {
+        duration: 1.5,
+        opacity: 0,
+        ease: "expo.inOut",
+    }) // Запуск анимации текста спустя 1.5 сек от начала анимации фона
+
+    
+
+    // Анимация для секции "Наши Преимущества"
+    gsap.from(".section-about__text h2", {
+        opacity: 0,
+        y: 50,
+        duration: 1,
+        ease: "expo.out",
+        scrollTrigger: {
+            trigger: ".section-about",
+            start: "top 80%",
+            toggleActions: "play none none none"
+        }
+    });
+
+    gsap.from(".section-about__text p", {
+        opacity: 0,
+        y: 50,
+        duration: 1,
+        ease: "expo.out",
+        delay: 0.5,
+        scrollTrigger: {
+            trigger: ".section-about",
+            start: "top 80%",
+            toggleActions: "play none none none"
+        }
+    });
+
+    gsap.from(".main-button-dark", {
+        opacity: 0,
+        y: 30,
+        duration: 1,
+        ease: "expo.out",
+        delay: 0.8,
+        scrollTrigger: {
+            trigger: ".section-about",
+            start: "top 80%",
+            toggleActions: "play none none none"
+        }
+    });
+
+    // Анимация для списка li с использованием stagger
+    gsap.from(".section-about__info li", {
+        opacity: 0,
+        x: 100, // Появление справа
+        duration: 1,
+        ease: "expo.out",
+        stagger: 0.5, // Задержка между анимациями элементов
+        scrollTrigger: {
+            trigger: ".section-about__info",
+            start: "top 80%",
+            toggleActions: "play none none none"
+        }
+    });
+
+
+    // Анимация для списка li с использованием stagger
+    gsap.from(".accordion", {
+        opacity: 0,
+        x: 100, // Появление справа
+        duration: 1,
+        ease: "expo.out",
+        stagger: 0.1, // Задержка между анимациями элементов
+        scrollTrigger: {
+            trigger: ".accordion-wrapp",
+            start: "top 80%",
+            toggleActions: "play none none none"
+        }
+    });
+
+  
+    gsap.to(".section-hero__img", {
+        width: "100%", // Увеличение ширины до 100%
+        ease: "power1.out", // Плавное изменение
+        scrollTrigger: {
+            trigger: ".section-plus", // Триггер для активации анимации
+            start: "top 90%", // Анимация запускается, когда секция на 80% видна
+            end: "top 10%", // Анимация заканчивается, когда секция на 20% видна
+            scrub: true, // Плавная анимация, синхронизированная со скроллом
+            toggleActions: "play none none none", // Поведение при прокрутке
+        }
+    });
+}
+

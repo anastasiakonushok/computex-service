@@ -5,7 +5,7 @@
     position: relative;
     transition: all 0.3s ease-in-out;
     z-index: 1000;
-    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    // box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
     .header-top {
         padding: 10px 0px;
     
@@ -40,6 +40,10 @@
                 font-weight: 500;
                 // text-transform: uppercase;
             }
+        }
+        &__info--links {
+            flex-direction: column;
+            gap: 2px;
         }
     }
     .header-bottom {
@@ -112,7 +116,7 @@
 
 
 
-@include mq(tablet-wide, max) {
+@include mq(tablet, max) {
     .header {
         .header-bottom {
             display: none;
@@ -213,7 +217,7 @@
     
 }
 
-@include mq(tablet-wide, min) {
+@include mq(tablet, min) {
     .header {
         .header-top {
             &__info {
@@ -289,7 +293,7 @@
     }
 
     .header-top {
-        border-bottom: 1px solid rgb(214, 214, 214);
+        border-bottom: 1px solid rgb(213 212 212 / 40%);
     }
 
     .burger-menu {

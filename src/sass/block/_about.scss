@@ -1,41 +1,42 @@
-.section-sertificat {
-    padding-top: 90px;
-    h2 {
-        margin-bottom: 60px;
-    }
-    &__grid {
-        display: grid;
-        gap: 30px;
-        grid-template-columns: repeat(4,1fr);
-    }
-    &__block {
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-        align-items:center;
-        background:var(--main-white);
-        padding: 30px;
-        border-radius: 1rem;
-        box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-        transition: all 0.3s ease;
-        img {
-            max-height: 230px;
-        }
-        p {
-            color: var(--main-orange);
-            font-weight: 700;
-        }
-    }
-}
+
 .section-about {
+    position: relative;
     padding: 90px 0px;
     background:var(--main-white);
     &__container {
         gap: 60px;
     }
+    &__block {
+        margin-bottom: 60px;
+        p {
+            font-weight: 700;
+            font-size: var(--h2-font);
+            line-height: 120%;
+            color: var(--main-orange);
+            display: block;
+            width: 65%;
+            margin-bottom: 40px;
+        }
+        p:last-child {
+            color: #5a5a5a;
+            width: 60%;
+            margin-left: auto;
+            text-align: end;
+            font-size: var(--h3-font);
+            font-weight: 500;
+        }
+    }
+    // .circle {
+    //     width: 130px;
+    //     height: 130px;
+    //     bottom:20%;
+    //     left: 15%;
+    //     top: auto;
+    // }
     &__number {
+        
        display: grid;
-       grid-template-columns: repeat(2,1fr);
+       grid-template-columns: repeat(4,1fr);
         gap: 30px;
         span {
             line-height: 100%;
@@ -45,6 +46,7 @@
         }
     }
     &__counter {
+        text-align: center;
         p {
             margin-top: 15px;
             font-weight: 500;
@@ -73,6 +75,22 @@
         &__container {
             flex-direction: column;
         }
+        &__block {
+            width: 100%;
+
+            p {
+                width: 100%;
+            }
+            p:last-child {
+                width: 100%;
+                text-align: left;
+            }
+        }
+        &__number {
+            grid-template-columns: repeat(2, 1fr);
+            
+        }
+       
     }
     .section-sertificat {
         &__grid {

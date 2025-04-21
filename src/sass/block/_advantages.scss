@@ -5,15 +5,20 @@
     background-size: cover;
     &__container {
         justify-content: space-between;
+        align-items: center;
     }
     &__block {
         align-items:center;
+        flex: 1 0;
+        max-width: 25%;
         gap: 30px;
+        img {
+            border-radius: 50%;
+        }
         span {
             @include regular;
             font-weight: 700;
             color:var(--white-color);
-            width: 40%;
         }
     }
 }
@@ -27,9 +32,10 @@
         &__container {
            flex-direction: column;
            gap: 60px;
+           align-items:start;
         }
         &__block {
-            
+            max-width: 100%;
             span {
                 width: 100%;
             }
