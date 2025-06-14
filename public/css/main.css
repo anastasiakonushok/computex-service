@@ -1671,7 +1671,7 @@ p {
 
 .service-info__block {
   width: 65%;
-  margin: 60px 0 60px auto;
+  margin: 30px 0 0px auto;
   gap: 30px;
 }
 
@@ -1679,10 +1679,6 @@ p {
   -webkit-box-flex: 1;
   -ms-flex: 1;
   flex: 1;
-}
-
-.service-info__row:not(:last-child) {
-  margin-bottom: 30px;
 }
 
 .service-info__title {
@@ -1703,6 +1699,7 @@ p {
 }
 
 .service-info__img {
+  margin-top: 60px;
   width: 80%;
   margin-left: auto;
   position: relative;
