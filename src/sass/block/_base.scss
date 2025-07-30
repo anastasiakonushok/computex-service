@@ -86,6 +86,9 @@ p {
             margin-bottom: 15px;
             @include regular;
         }
+        li::marker {
+            color:var(--main-orange);
+        }
     }
     b {
         font-weight: 700;

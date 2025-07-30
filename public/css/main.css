@@ -385,6 +385,10 @@ p {
   font-weight: 400;
 }
 
+.inner-content ul li::marker {
+  color: var(--main-orange);
+}
+
 .inner-content b {
   font-weight: 700;
 }
